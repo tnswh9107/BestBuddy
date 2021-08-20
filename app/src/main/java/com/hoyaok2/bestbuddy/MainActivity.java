@@ -108,6 +108,7 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.mypage:
                         if (fragments[4] == null) {
                             fragments[4] = new Home_Login();
+
                             tran.add(R.id.container, fragments[4]);
                         }
                         tran.show(fragments[4]);
