@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Makemember">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/membertoolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title="회원가입"
+        style="@style/MyToolbar"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Best Buddy"
+        android:gravity="center"
+        android:layout_marginTop="30dp"
+        android:textSize="30dp"
+        android:textStyle="bold"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/memver_profile"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/profilenull"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:onClick="click_signup_Profile"/>
+
+    <EditText
+        android:id="@+id/memver_etid"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:hint="ID"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:inputType="textEmailAddress"/>
+
+    <EditText
+        android:id="@+id/memver_etpassword"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:hint="password"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:inputType="textPassword"/>
+
+    <EditText
+        android:id="@+id/memver_etnickname"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:hint="nickname"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:inputType="text"/>
+
+    <Button
+        android:id="@+id/memver_signup"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="가입하기"
+        android:textSize="25sp"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:backgroundTint="@color/white"
+        android:padding="8dp"/>
+
+
+
+</LinearLayout>

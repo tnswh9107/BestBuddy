@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
                 switch (item.getItemId())
                 {
                     case R.id.house:
-                        startActivity(new Intent(getApplicationContext(),Login.class));
+                        startActivity(new Intent(getApplicationContext(), Home_Login.class));
                         drawerLayout.closeDrawer(navigationView);
                         break;
 
@@ -104,6 +104,14 @@ public class MainActivity extends AppCompatActivity {
                         }
                         tran.show(fragments[1]);
                         getSupportActionBar().setTitle("헤니 사랑해");
+                        break;
+                    case R.id.mypage:
+                        if (fragments[4] == null) {
+                            fragments[4] = new Home_Login();
+                            tran.add(R.id.container, fragments[4]);
+                        }
+                        tran.show(fragments[4]);
+                        getSupportActionBar().setTitle("로그인");
                         break;
 
                 }

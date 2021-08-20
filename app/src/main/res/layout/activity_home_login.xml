@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Login">
+    tools:context=".Home_Login">
 
 
     <androidx.appcompat.widget.Toolbar
@@ -89,6 +89,7 @@
     </LinearLayout>
 
     <Button
+        android:id="@+id/makemember"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="right"
@@ -98,6 +99,8 @@
         android:text="회원가입"
         android:textColor="@color/black"
         android:textSize="25sp"
-        app:backgroundTint="@color/white" />
+        app:backgroundTint="@color/white"
+        android:onClick="button"
+        />
 
 </LinearLayout>
