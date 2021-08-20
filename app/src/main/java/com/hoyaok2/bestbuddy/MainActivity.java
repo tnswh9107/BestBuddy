@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
         drawerLayout = findViewById(R.id.layout_drawer);
 
         //토글 만들기
-        navigationView.findViewById(R.id.naviv);
+        navigationView = findViewById(R.id.naviv);
         drawerToggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.app_name, R.string.app_name);
         drawerLayout.addDrawerListener(drawerToggle);
         drawerToggle.syncState();
@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
                 switch (item.getItemId())
                 {
                     case R.id.house:
-                        startActivity(new Intent(MainActivity.this,Home_Map.class));
+                        startActivity(new Intent(getApplicationContext(),Login.class));
                         drawerLayout.closeDrawer(navigationView);
                         break;
 

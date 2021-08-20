@@ -2,7 +2,6 @@ package com.hoyaok2.bestbuddy;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
 import android.os.Bundle;
@@ -15,6 +14,8 @@ public class Home_Main extends Fragment {
 
     TextView tv;
 
+
+
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,7 +25,7 @@ public class Home_Main extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.activity_home_home,container,false);
+        return inflater.inflate(R.layout.activity_home_main,container,false);
     }
 
     @Override

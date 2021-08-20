@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_background"
+    android:orientation="vertical"
+    tools:context=".Home_Main">
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:orientation="horizontal"
+                android:paddingTop="20dp">
+
+                <EditText
+                    android:id="@+id/search"
+                    android:layout_width="280dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="16dp"
+                    android:background="@color/white"
+                    android:drawableLeft="@drawable/search"
+                    android:hint="무엇을 찾으시나요?"
+                    android:padding="16dp"
+                    android:paddingTop="100dp"
+                    android:textColor="#ff333333"
+                    android:textSize="16dp" />
+
+                <Button
+                    android:id="@+id/searchbtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/white"
+                    android:text="검색"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+            <!--   검색 레이아웃-->
+
+
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="200dp"
+                android:layout_weight="1"
+                android:gravity="center">
+
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/rest"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginRight="30dp"
+                    android:text="숙소"
+                    android:background="@drawable/home_houseicon"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/sea"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_toRightOf="@id/rest"
+                    android:text="바다"
+                    android:background="@drawable/home_seaicon"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/mountain"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_toRightOf="@id/sea"
+                    android:text="산"
+                    android:background="@drawable/home_mountainicon"/>
+            </RelativeLayout>
+            <!--            숙소 바다 산 레이아웃-->
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/play"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginRight="30dp"
+                    android:text="야영장"
+                    android:background="@drawable/home_campingicon"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/local"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_toRightOf="@id/play"
+                    android:text="바다" />
+
+            </RelativeLayout>
+            <!--        숙소 바다 레이아웃-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="16dp"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/pop"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="인기 많은 글"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/more"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="8dp"
+                        android:text="더보기"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+                <!--                Text 릴레티브끝-->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="270dp"
+                    android:padding="8dp"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    android:orientation="horizontal">
+                </androidx.recyclerview.widget.RecyclerView>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/poprest"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="인기 많은 글"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/popmore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="8dp"
+                        android:text="더보기"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler2"
+                    android:layout_width="match_parent"
+                    android:layout_height="270dp"
+                    android:padding="8dp"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    android:orientation="horizontal">
+                </androidx.recyclerview.widget.RecyclerView>
+
+
+            </LinearLayout>
+<!--            Text리네어 인기많은글 더보기 끝-->
+
+        </LinearLayout>
+        <!--        전체레이아웃-->
+
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</LinearLayout>
