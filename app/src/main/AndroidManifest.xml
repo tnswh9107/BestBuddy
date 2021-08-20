@@ -12,7 +12,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.BestBuddy">
-        <activity android:name=".Makemember"></activity>
+        <activity android:name=".Home_Mypage"></activity>
+        <activity android:name=".Home_ReView" />
+        <activity android:name=".Makemember" />
         <activity android:name=".Home_Picture" />
         <activity android:name=".Home_Map" />
         <activity android:name=".Home_Main" />

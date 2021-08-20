@@ -95,7 +95,7 @@ public class MainActivity extends AppCompatActivity {
                 switch (item.getItemId()) {
                     case R.id.home:
                         tran.show(fragments[0]);
-                        getSupportActionBar().setTitle("헤니 사랑해");
+                        getSupportActionBar().setTitle("홈 메뉴");
                         break;
                     case R.id.myaround:
                         if (fragments[1] == null) {
@@ -103,11 +103,30 @@ public class MainActivity extends AppCompatActivity {
                             tran.add(R.id.container, fragments[1]);
                         }
                         tran.show(fragments[1]);
-                        getSupportActionBar().setTitle("헤니 사랑해");
+                        getSupportActionBar().setTitle("내주변 지도");
                         break;
+                    case R.id.picture:
+                        if (fragments[2] == null) {
+                            fragments[2] = new Home_Picture();
+
+                            tran.add(R.id.container, fragments[2]);
+                        }
+                        tran.show(fragments[2]);
+                        getSupportActionBar().setTitle("친구 사진보기");
+                        break;
+                    case R.id.review:
+                        if (fragments[3] == null) {
+                            fragments[3] = new Home_ReView();
+
+                            tran.add(R.id.container, fragments[3]);
+                        }
+                        tran.show(fragments[3]);
+                        getSupportActionBar().setTitle("리뷰보기");
+                        break;
+
                     case R.id.mypage:
                         if (fragments[4] == null) {
-                            fragments[4] = new Home_Login();
+                            fragments[4] = new Home_Mypage();
 
                             tran.add(R.id.container, fragments[4]);
                         }

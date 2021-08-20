@@ -43,6 +43,9 @@ dependencies {
     //구글 지도 라이브러리 적용
     implementation 'com.google.android.gms:play-services-maps:17.0.1'
 
+    //Swiper 라이브러리 적용(새로고침화면 땡겼을때)
+    implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.2.0-alpha01'
+
 
 
 

@@ -11,7 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-public class Home_Picture extends Fragment {
+public class Home_ReView extends Fragment {
 
     TextView tv;
     @Override
