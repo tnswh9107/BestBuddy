@@ -18,7 +18,7 @@
             android:layout_marginLeft="10dp">
 
             <ImageView
-                android:id="@+id/ivpic"
+                android:id="@+id/play_show_pic"
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
                 android:layout_gravity="center"
@@ -35,7 +35,7 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/play_name"
+                android:id="@+id/play_show_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
@@ -45,6 +45,7 @@
                 android:textSize="15dp" />
 
             <TextView
+                android:id="@+id/play_show_ex"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
@@ -53,7 +54,7 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/play_story"
+                android:id="@+id/play_show_story"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"

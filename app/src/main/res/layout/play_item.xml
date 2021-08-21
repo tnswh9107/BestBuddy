@@ -35,7 +35,7 @@
             android:layout_marginTop="20dp"
             />
         <TextView
-            android:id="@+id/review_title2"
+            android:id="@+id/play_title2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="놀러오세요"
