@@ -33,7 +33,7 @@
 
         <meta-data
             android:name="com.google.android.gms.version"
-            android:value="@integer/google_play_services_version" />
+            android:value="AIzaSyCLbQHlrkFP-pAqU0hInsDTnR3qlVuPBlQ" />
 
         <!-- HTTP 라이브러리 사용 -->
         <uses-library
@@ -41,9 +41,9 @@
             android:required="false" />
 
 <!--        API 키 등록-->
-<!--        <meta-data-->
-<!--            android:name="com.google.android.geo.API_KEY"-->
-<!--            android:value="${MAPS_API_KEY}" />-->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="${MAPS_API_KEY}" />
 
 
     </application>
