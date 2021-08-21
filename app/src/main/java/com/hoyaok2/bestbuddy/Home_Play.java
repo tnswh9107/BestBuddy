@@ -37,6 +37,7 @@ public class Home_Play extends Fragment {
 //                Intent intent = new Intent(getActivity(),Play_Add.class);
 //                startActivity(intent);
                 Intent intent = new Intent(getActivity(),Play_Add.class);
+
             }
         });
 
