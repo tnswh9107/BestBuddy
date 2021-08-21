@@ -11,6 +11,8 @@ import android.widget.ToggleButton;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
+
 import java.util.ArrayList;
 
 public class Play_Adapter extends RecyclerView.Adapter {
@@ -38,8 +40,12 @@ public class Play_Adapter extends RecyclerView.Adapter {
 
         Play_item item = items.get(position);
 
-        ((VH) holder).tvTitle1.setText(item.name);
-        ((VH) holder).tvTitle2.setText(item.ex);
+        ((VH) holder).tvTitle1.setText(item.title);
+        ((VH) holder).tvTitle2.setText(item.title2);
+
+//        String imgUrl =
+
+        Glide.with(context).load(item.pic).into(((VH) holder).iv);
 
 
     }

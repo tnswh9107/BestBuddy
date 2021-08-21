@@ -46,7 +46,8 @@ dependencies {
     //Swiper 라이브러리 적용(새로고침화면 땡겼을때)
     implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
 
-
+    //Glide 라이브러리 적용
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
 
 
 }
