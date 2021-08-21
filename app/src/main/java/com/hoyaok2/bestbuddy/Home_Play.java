@@ -21,7 +21,7 @@ public class Home_Play extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.activity_home__map,container,false);
+        return inflater.inflate(R.layout.activity_home__play,container,false);
     }
 
     @Override
@@ -29,4 +29,7 @@ public class Home_Play extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
     }
+
+
+
 }
