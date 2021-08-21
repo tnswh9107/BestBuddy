@@ -72,7 +72,6 @@ public class Home_Play extends Fragment {
 
         refreshLayout = view.findViewById(R.id.layout_refresh);
 
-        refreshLayout = view.findViewById(R.id.layout_refresh);
         refreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {

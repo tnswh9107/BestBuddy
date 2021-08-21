@@ -50,9 +50,10 @@ public class Play_Adapter extends RecyclerView.Adapter {
         ((VH) holder).tvTitle1.setText(item.title);
         ((VH) holder).tvTitle2.setText(item.subtitle);
 
-//        String imgUrl =
+        String imgUrl="http://tnswh9107.dothome.co.kr/BuddyPlay/"+item.file;
 
-        Glide.with(context).load(item.pic).into(((VH) holder).iv);
+
+        Glide.with(context).load(imgUrl).into(((VH) holder).iv);
 
         if (item.favor==0) ((VH) holder).favor.setChecked(false);
         else ((VH) holder).favor.setChecked(true);

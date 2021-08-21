@@ -56,7 +56,7 @@ public class Play_Add extends AppCompatActivity {
    ////////////////////카메라 갤러리 시작
     public void pic_upload(View view) {
         Intent intent = new Intent(Intent.ACTION_PICK);
-        intent.setType("iamge/*");
+        intent.setType("image/*");
         startActivityForResult(intent,10);
     }
     //절대경로 c+v
