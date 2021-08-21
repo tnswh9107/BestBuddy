@@ -15,7 +15,7 @@
             android:layout_height="match_parent">
 
             <ImageView
-                android:id="@+id/review_item"
+                android:id="@+id/play_pic"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:scaleType="centerCrop"
@@ -24,7 +24,7 @@
         </com.google.android.material.card.MaterialCardView>
 
         <TextView
-            android:id="@+id/review_title1"
+            android:id="@+id/play_Title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_toRightOf="@id/cv"
@@ -40,7 +40,7 @@
             android:layout_height="wrap_content"
             android:text="놀러오세요"
             android:layout_toRightOf="@id/cv"
-            android:layout_below="@+id/review_title1"
+            android:layout_below="@+id/play_Title"
             android:textColor="@color/black"
             android:textSize="20dp"/>
 
