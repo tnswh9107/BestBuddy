@@ -17,13 +17,26 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
+
+import java.io.File;
+import java.util.HashMap;
+import java.util.Map;
+
+import okhttp3.MediaType;
+import okhttp3.MultipartBody;
+import okhttp3.RequestBody;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
 
 public class Play_Add extends AppCompatActivity {
 
     ImageView iv;
-    EditText name, story, pay, phone ;
+    EditText name, story, pay, phon ;
     String imgpath;
     TextView dialogtv;
 
@@ -36,7 +49,7 @@ public class Play_Add extends AppCompatActivity {
         name = findViewById(R.id.play_name);
         story = findViewById(R.id.play_story);
         pay = findViewById(R.id.play_pay);
-        phone = findViewById(R.id.play_phone);
+        phon = findViewById(R.id.play_phone);
     }
 
 
@@ -76,10 +89,54 @@ public class Play_Add extends AppCompatActivity {
         }
     }
 
-    /////
+    /////Play_Add -> Retrofit
     public void btnok(View view) {
+//        name, story, pay, phone ;
 
+        String title = name.getText().toString();
+        String subtitle = story.getText().toString();
+        String price = pay.getText().toString();
+        String phone = phon.getText().toString();
+
+        Retrofit retrofit = Retrofit_Helper.getRetrofitInstanceScalars();
+        Retrofit_Service retrofit_service = retrofit.create(Retrofit_Service.class);
+
+        MultipartBody.Part filePart = null;
+        if(imgpath!=null)
+        {
+            File file = new File(imgpath);
+            {
+                RequestBody requestBody = RequestBody.create(MediaType.parse("image/*"),file);
+                filePart = MultipartBody.Part.createFormData("img",file.getName(),requestBody);
+            }
+        }
+
+        //서버 연동 타이틀 이름
+        Map<String,String> dataPart = new HashMap<>();
+        dataPart.put("title",title);
+        dataPart.put("subtitle",subtitle);
+        dataPart.put("price",price);
+        dataPart.put("phone",phone);
+
+        // Play(ReTrofit) => 서버
+        Call<String> call = retrofit_service.postDataToServer(dataPart,filePart);
+        call.enqueue(new Callback<String>() {
+            @Override
+            public void onResponse(Call<String> call, Response<String> response) {
+                String s = response.body();
+                Toast.makeText(Play_Add.this, ""+s, Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onFailure(Call<String> call, Throwable t) {
+                Toast.makeText(Play_Add.this, ""+t.getMessage(), Toast.LENGTH_SHORT).show();
+
+            }
+        });
+        finish();
     }
+
+
 
 
     AlertDialog dialog;
