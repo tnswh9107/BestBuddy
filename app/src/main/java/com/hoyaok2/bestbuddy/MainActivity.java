@@ -91,6 +91,9 @@ public class MainActivity extends AppCompatActivity {
                 FragmentTransaction tran = fragmentManager.beginTransaction();
                 if (fragments[0] != null) tran.hide(fragments[0]);
                 if (fragments[1] != null) tran.hide(fragments[1]);
+                if (fragments[2] != null) tran.hide(fragments[2]);
+                if (fragments[3] != null) tran.hide(fragments[3]);
+                if (fragments[4] != null) tran.hide(fragments[4]);
 
                 switch (item.getItemId()) {
                     case R.id.home:

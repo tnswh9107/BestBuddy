@@ -36,7 +36,7 @@ public class Home_Play extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view =  inflater.inflate(R.layout.activity_home__play,container,false);
 
-        items.add(new Play_item(R.drawable.home_houseicon," 아무거나 ",""));
+//        items.add(new Play_item(R.drawable.home_houseicon," 아무거나 ",""));
 
         button = view.findViewById(R.id.addplay);
 
@@ -64,6 +64,12 @@ public class Home_Play extends Fragment {
 
         refreshLayout = view.findViewById(R.id.layout_refresh);
 
+
+        items.add(new Play_item(R.drawable.home_houseicon," 아무거나 ","옥이바보똥꼬"));
+        items.add(new Play_item(R.drawable.home_houseicon," 아무거나 ","옥이바보똥꼬"));
+        items.add(new Play_item(R.drawable.home_houseicon," 아무거나 ","옥이바보똥꼬"));
+        items.add(new Play_item(R.drawable.home_houseicon," 아무거나 ","옥이바보똥꼬"));
+        items.add(new Play_item(R.drawable.home_houseicon," 아무거나 ","옥이바보똥꼬"));
 
 
 

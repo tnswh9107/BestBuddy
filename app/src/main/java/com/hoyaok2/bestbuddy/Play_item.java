@@ -13,11 +13,11 @@ public class Play_item {
 ////        this.story = story;
 ////        this.price = price;
 //    }
-    String pic;
+    int pic;
     String title;
     String title2;
 
-    public Play_item(String pic, String title, String title2) {
+    public Play_item(int pic, String title, String title2) {
         this.pic = pic;
         this.title = title;
         this.title2 = title2;
