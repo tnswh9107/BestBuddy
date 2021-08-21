@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+
+    <ImageView
+        android:id="@+id/ivpic"
+        android:layout_width="350dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/play_addpicture"/>
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:backgroundTint="@color/white"
+        android:layout_gravity="right"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="10dp"
+        android:text="사진올리기"
+        android:textColor="@color/black"
+        android:textSize="15sp"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="30dp">
+            <TextView
+                android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+                android:text="체험장"
+                android:textStyle="bold"
+                android:textSize="20dp"/>
+
+            <EditText
+                android:id="@+id/play_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="체험할 종목을 작성 해 주세요"
+                android:maxLength="15"
+                android:singleLine="true"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="체험 설명"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:layout_marginTop="15dp"/>
+
+            <EditText
+                android:id="@+id/play_story"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:hint="체험 종목에 대해 설명해주세요"
+                android:maxLength="30"
+                android:singleLine="true"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="체험비"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:layout_marginTop="15dp"/>
+
+            <EditText
+                android:id="@+id/play_pay"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:hint="체험비 가격을 숫자로만 작성해주세요"
+                android:maxLength="30"
+                android:singleLine="true"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="전화번호"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:layout_marginTop="15dp"/>
+
+            <EditText
+                android:id="@+id/play_phon"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:hint="연락받으실 번호를 작성해주세요"
+                android:maxLength="30"
+                android:singleLine="true"/>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

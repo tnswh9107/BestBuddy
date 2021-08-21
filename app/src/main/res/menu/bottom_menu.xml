@@ -14,9 +14,9 @@
         android:title="사진올리기"
         android:icon="@drawable/nav_shopping"/>
 <!--리뷰-->
-    <item android:id="@+id/review"
-        android:title="리뷰"
-        android:icon="@drawable/nav_review"/>
+    <item android:id="@+id/play"
+        android:title="체험하기"
+        android:icon="@drawable/nav_play"/>
 <!--마이페이지-->
     <item android:id="@+id/mypage"
         android:title="마이페이지"

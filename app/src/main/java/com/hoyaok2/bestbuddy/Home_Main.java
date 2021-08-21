@@ -12,7 +12,7 @@ import android.widget.TextView;
 
 public class Home_Main extends Fragment {
 
-    TextView tv;
+
 
 
 
@@ -32,7 +32,6 @@ public class Home_Main extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        tv = view.findViewById(R.id.tv);
     }
 
 }

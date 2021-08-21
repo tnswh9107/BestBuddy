@@ -20,10 +20,10 @@
     </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/addreview"
+            android:id="@+id/addplay"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/review_writeicon"
+            android:src="@drawable/play_writeicon"
             android:layout_alignParentBottom="true"
             android:layout_alignParentRight="true"
             android:layout_margin="20dp"

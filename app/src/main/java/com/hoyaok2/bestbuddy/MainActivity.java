@@ -114,14 +114,14 @@ public class MainActivity extends AppCompatActivity {
                         tran.show(fragments[2]);
                         getSupportActionBar().setTitle("친구 사진보기");
                         break;
-                    case R.id.review:
+                    case R.id.play:
                         if (fragments[3] == null) {
-                            fragments[3] = new Home_ReView();
+                            fragments[3] = new Home_Play();
 
                             tran.add(R.id.container, fragments[3]);
                         }
                         tran.show(fragments[3]);
-                        getSupportActionBar().setTitle("리뷰보기");
+                        getSupportActionBar().setTitle("체험하기");
                         break;
 
                     case R.id.mypage:

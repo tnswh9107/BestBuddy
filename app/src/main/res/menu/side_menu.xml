@@ -20,7 +20,7 @@
     <!--현재 내위치-->
     <item android:id="@+id/myaround"
         android:title="현재 내위치"
-        android:icon="@drawable/nav_review"/>
+        android:icon="@drawable/nav_play"/>
     <!--리뷰-->
     <item android:id="@+id/review"
         android:title="리뷰"
