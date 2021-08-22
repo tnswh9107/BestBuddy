@@ -67,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
                 switch (item.getItemId())
                 {
                     case R.id.house:
-                        startActivity(new Intent(getApplicationContext(), Home_Login.class));
+                        startActivity(new Intent(getApplicationContext(), Login_Joy.class));
                         drawerLayout.closeDrawer(navigationView);
                         break;
 
@@ -167,6 +167,13 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this,Makemember.class);
         startActivity(intent);
     }
+
+    public void clickLoginBtn(View view){
+        Intent intent = new Intent(this,Login_Joy.class);
+        startActivity(intent);
+    }
+
+
 
 
 

@@ -21,7 +21,7 @@
         <activity android:name=".Makemember" /> <!-- <activity android:name=".Home_Picture" /> -->
         <!-- <activity android:name=".Home_Map" /> -->
         <!-- <activity android:name=".Home_Main" /> -->
-        <activity android:name=".Home_Login" />
+        <activity android:name=".Login_Joy" />
         <activity android:name=".IntroActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

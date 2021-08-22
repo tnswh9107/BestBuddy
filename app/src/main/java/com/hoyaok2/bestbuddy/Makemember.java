@@ -21,6 +21,7 @@ import com.bumptech.glide.Glide;
 import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.Delayed;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 import okhttp3.MediaType;
@@ -47,12 +48,12 @@ public class Makemember extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_makemember);
 
-        circleImageView.findViewById(R.id.memver_profile);
-        memid.findViewById(R.id.memver_etid);
-        mempw.findViewById(R.id.memver_etpassword);
-//        mempwc.findViewById(R.id.memver_etpassword_check);
-        memnicname.findViewById(R.id.memver_etnickname);
-        memsign.findViewById(R.id.memver_signup);
+        circleImageView=findViewById(R.id.memver_profile);
+        memid=findViewById(R.id.memver_etid);
+        mempw=findViewById(R.id.memver_etpassword);
+//        mempwc=findViewById(R.id.memver_etpassword_check);
+        memnicname=findViewById(R.id.memver_etnickname);
+        memsign=findViewById(R.id.memver_signup);
 
         memsign.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -66,10 +67,10 @@ public class Makemember extends AppCompatActivity {
                     Toast.makeText(Makemember.this, "모두 입력해주세요", Toast.LENGTH_SHORT).show();
                     return;
                 }
-                if (userid.length()<=5){
+                if (userid.length()<=1){
                     Toast.makeText(Makemember.this, "Id는 6글자 이상 가능합니다", Toast.LENGTH_SHORT).show();
                 }
-                if (userpw.length()<=7){
+                if (userpw.length()<=1){
                     Toast.makeText(Makemember.this, "비밀번호는 8글자 가능합니다", Toast.LENGTH_SHORT).show();
                 }
 //                if (userpw!=userpwc)
@@ -103,7 +104,7 @@ public class Makemember extends AppCompatActivity {
                     public void onResponse(Call<String> call, Response<String> response) {
                         String s =response.body();
                         Toast.makeText(Makemember.this, ""+s, Toast.LENGTH_SHORT).show();
-
+                        finish();
                     }
 
                     @Override
@@ -115,6 +116,8 @@ public class Makemember extends AppCompatActivity {
 
             }
         });
+
+
 
 
     }

@@ -9,9 +9,12 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 public class Home_Mypage extends Fragment {
+
+    Home_Mypage Button;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -21,7 +24,11 @@ public class Home_Mypage extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.activity_home__mypage, container, false);
+        View view =  inflater.inflate(R.layout.activity_home__mypage, container, false);
+
+
+
+        return view;
     }
 
     @Override
