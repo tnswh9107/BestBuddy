@@ -168,10 +168,13 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void clickLoginBtn(View view){
+    public void clickLoginBtn(View view)
+    {
         Intent intent = new Intent(this,Login_Joy.class);
         startActivity(intent);
     }
+
+
 
 
 

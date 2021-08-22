@@ -61,5 +61,32 @@ public interface Retrofit_Service {
     Call<Member_Item> User(@Field("userid")String userid, @Field("userpw") String userpassword);
 
 
+    ////////////////////////////////////로그인 입력
+
+    //POST로 데이터를 보낼때는 @Field 사용 - @FormUrlEncoded와 함께 써야함
+    //이미지 파일을 보낼때는 @Part 사용 - @Multipart와 함께 써야함
+    //@FormUrlEncoded 와 @Multipart는 동시에 사용 불가
+    //@Field처럼 php에서 $_POST로 받으려면 마치 GET방식의 @QueryMap처럼 @PartMap 사용
+    @Multipart
+    @POST("/BuddyLogin/insertDB.php")
+    Call<String> postDataToServerlogin(@PartMap Map<String, String> dataPart,
+                                  @Part MultipartBody.Part filePart);
+
+
+    //서버에서 데이터를 json으로 파싱하여 가져오는 추상메소드
+    @GET("/BuddyLogin/loadDB.php")
+    Call<ArrayList<LoginItem>> loadDataFromServerlogin();
+
+
+    //로그인 확인
+
+//    @FormUrlEncoded
+//    @POST("/Campinggosignup/loadLogin.php")
+//    Call<LoginItem> User(@Field("userID")String userID, @Field("userPasswrod") String userPassword);
+
+    @FormUrlEncoded
+    @POST("/BuddyLogin/loadLogin.php")
+    Call<LoginItem> Userlogin(@Field("loginid")String loginid, @Field("loginpw") String loginpw);
+
 
 }

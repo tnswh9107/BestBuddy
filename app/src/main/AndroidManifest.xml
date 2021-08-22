@@ -15,7 +15,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BestBuddy"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Play_Show"></activity>
+        <activity
+            android:name=".Mypage_Setting"
+            android:label="@string/title_activity_mypage__setting"
+            android:theme="@style/Theme.BestBuddy.NoActionBar"></activity>
+        <activity android:name=".Play_Show" />
         <activity android:name=".Play_Add" /> <!-- <activity android:name=".Home_Mypage" /> -->
         <!-- <activity android:name=".Home_Play" /> -->
         <activity android:name=".Makemember" /> <!-- <activity android:name=".Home_Picture" /> -->

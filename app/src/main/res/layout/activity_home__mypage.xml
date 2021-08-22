@@ -1,9 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Home_Mypage">
+    tools:context=".Home_Mypage"
+    android:orientation="vertical"
+    android:padding="16dp">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="200dp"
+       android:id="@+id/Rela">
+       <de.hdodenhof.circleimageview.CircleImageView
+           android:id="@+id/mypage_profile"
+           android:layout_width="100dp"
+           android:layout_height="100dp"
+           android:src="@drawable/profilenull"
+           android:layout_centerInParent="true"
+           />
+       <TextView
+           android:id="@+id/mypage_nicname"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="test"
+           android:textSize="20sp"
+           android:layout_centerHorizontal="true"
+           android:paddingTop="150dp"
+           />
+       <TextView
+           android:background="@color/teal_200"
+           android:id="@+id/mypage_logout"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="LOGOUT"
+           android:layout_alignParentRight="true"
+           android:layout_alignParentBottom="true"
+           android:layout_marginRight="50dp"
+           android:layout_below="@id/mypage_nicname"
+           android:textSize="20dp"           />
+
+   </RelativeLayout>
+    <Button
+        android:layout_marginTop="20dp"
+        android:id="@+id/page_favorlist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="찜한목록"
+        android:backgroundTint="#D3D3D3"
+        android:padding="8dp"
+        android:textSize="18sp"
+        android:textColor="#323131" />
+    <Button
+        android:id="@+id/page_setting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="환경설정"
+        android:backgroundTint="#D3D3D3"
+        android:padding="8dp"
+        android:textSize="18sp"
+        android:textColor="#323131" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="고객센터"
+        android:backgroundTint="#D3D3D3"
+        android:padding="8dp"
+        android:textSize="18sp"
+        android:textColor="#323131"
+        />
+    <Button
+        android:id="@+id/page_made"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="계정관리"
+        android:backgroundTint="#D3D3D3"
+        android:padding="8dp"
+        android:textSize="18sp"
+        android:textColor="#323131" />
+
+</LinearLayout>
