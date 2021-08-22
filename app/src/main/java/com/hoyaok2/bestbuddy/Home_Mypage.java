@@ -13,7 +13,6 @@ import android.widget.TextView;
 
 public class Home_Mypage extends Fragment {
 
-    TextView tv;
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,13 +21,11 @@ public class Home_Mypage extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.activity_home__mypage,container,false);
+        return inflater.inflate(R.layout.activity_home__mypage, container, false);
     }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
-        tv=view.findViewById(R.id.tv);
     }
 }

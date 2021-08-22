@@ -1,6 +1,11 @@
 package com.hoyaok2.bestbuddy;
 
+import android.app.Activity;
+import android.app.ActivityOptions;
 import android.content.Context;
+import android.content.Intent;
+import android.os.Build;
+import android.util.Pair;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -107,6 +112,38 @@ public class Play_Adapter extends RecyclerView.Adapter {
                     });
                 }
             });
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    int position = getLayoutPosition();
+
+                    String pic = items.get(position).file;
+                    String title = items.get(position).title;
+                    String subtitle = items.get(position).subtitle;
+                    String price = items.get(position).price;
+                    String phone = items.get(position).phone;
+
+
+                    Intent intent = new Intent(context,Play_Show.class);
+                    intent.putExtra("pic",pic);
+                    intent.putExtra("title",title);
+                    intent.putExtra("subtitle",subtitle);
+                    intent.putExtra("price",price);
+                    intent.putExtra("phone",phone);
+
+                    //클릭시 애니메이션 효과
+                    if (Build.VERSION.SDK_INT>=Build.VERSION_CODES.LOLLIPOP){
+                        ActivityOptions options=ActivityOptions.makeSceneTransitionAnimation((Activity)context,new Pair<View,String>(iv,"PlayShow"));
+                        context.startActivity(intent,options.toBundle());
+                    }else {
+                        context.startActivity(intent);
+                    }
+
+
+                }
+            });
+
         }
     }
 

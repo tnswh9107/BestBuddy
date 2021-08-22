@@ -13,7 +13,7 @@ import android.widget.TextView;
 
 public class Home_Picture extends Fragment {
 
-    TextView tv;
+
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,6 +29,6 @@ public class Home_Picture extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        tv=view.findViewById(R.id.tv);
+
     }
 }

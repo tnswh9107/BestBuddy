@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
-
+    android:orientation="vertical"
+    tools:context=".Play_Show">
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
@@ -39,7 +40,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                android:hint="체험할 종목을 작성 해 주세요"
+
                 android:maxLength="15"
                 android:singleLine="true"
                 android:textSize="15dp" />
@@ -58,7 +59,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                android:hint="체험 종목에 대해 설명해주세요"
                 android:maxLength="30"
                 android:singleLine="true"
 
@@ -76,7 +76,6 @@
                 android:id="@+id/play_pay"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="체험비 가격을 숫자로만 작성해주세요"
                 android:maxLength="30"
                 android:singleLine="true"
 
@@ -94,7 +93,6 @@
                 android:id="@+id/play_phon"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="연락받으실 번호를 작성해주세요"
                 android:maxLength="30"
                 android:singleLine="true"
                 android:textSize="15dp" />
@@ -149,5 +147,7 @@
 
 
     </androidx.core.widget.NestedScrollView>
+
+
 
 </LinearLayout>
