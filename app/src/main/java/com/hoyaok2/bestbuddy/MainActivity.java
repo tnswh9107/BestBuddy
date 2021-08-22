@@ -15,6 +15,7 @@ import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
@@ -161,6 +162,11 @@ public class MainActivity extends AppCompatActivity {
         }
 
     } //oncreate 끝
+
+    public void clickSignupBtn(View view){
+        Intent intent = new Intent(this,Makemember.class);
+        startActivity(intent);
+    }
 
 
 

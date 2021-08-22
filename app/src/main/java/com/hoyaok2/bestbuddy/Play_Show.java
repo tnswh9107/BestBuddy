@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -22,7 +23,7 @@ public class Play_Show extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_play__show);
 
-        showiv = findViewById(R.id.play_pic);
+        showiv = findViewById(R.id.play_show_pic);
         showtitle = findViewById(R.id.play_show_name);
         showsub = findViewById(R.id.play_show_story);
         showprice = findViewById(R.id.play_pay);
@@ -31,12 +32,19 @@ public class Play_Show extends AppCompatActivity {
         Intent intent = getIntent();
 
         String pic = intent.getStringExtra("pic");
-        String title = intent.getStringExtra("tittle");
+        String title = intent.getStringExtra("title");
         String subtitle = intent.getStringExtra("subtitle");
         String price = intent.getStringExtra("price");
         String phone = intent.getStringExtra("phone");
 
-        String imgUrl = "http://tnswh9107.dothome.co.kr/BuddyPlay"+pic;
+
+
+
+        String imgUrl = "http://tnswh9107.dothome.co.kr/BuddyPlay/"+pic;
+
+        Log.d("test",imgUrl);
+
+//        Log.d("쪼매니 혜니",)
 
         if (imgUrl==null) Glide.with(this).load(R.drawable.noimage).into(showiv);
         else Glide.with(this).load(imgUrl).into(showiv);

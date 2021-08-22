@@ -53,6 +53,16 @@
         android:textStyle="bold"
         android:textSize="16sp"
         android:inputType="textPassword"/>
+    <EditText
+        android:id="@+id/memver_etpassword_check"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:hint="password"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:inputType="textPassword"/>
 
     <EditText
         android:id="@+id/memver_etnickname"

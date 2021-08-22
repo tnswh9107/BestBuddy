@@ -6,6 +6,8 @@ import java.util.Map;
 import okhttp3.MultipartBody;
 import retrofit2.Call;
 import retrofit2.http.Body;
+import retrofit2.http.Field;
+import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
 import retrofit2.http.Multipart;
 import retrofit2.http.POST;
@@ -31,12 +33,33 @@ public interface Retrofit_Service {
 
     //클릭 된것만 뺴옴
     @GET("/BuddyPlay/loadDBFavor.php")
-    Call<ArrayList<Play_item>> loadDataFromServershopping();
+    Call<ArrayList<Play_item>> loadDataFromPlay();
 
 
 
     //"좋아요" 클릭으로 데이터의 변경을 시키는 작업을 해주는 php를 실행시키기
     @PUT("/BuddyPlay/{fileName}")
     Call<Play_item> updateData(@Path("fileName") String fileName, @Body Play_item item);
+
+
+    ///////////////////////////////////////////로그인 레트로 서비스
+
+    @Multipart
+    @POST("/BuddyMember/insertDB.php")
+    Call<String> postDataToServermember(@PartMap Map<String, String> dataPart,
+                                  @Part MultipartBody.Part filePart);
+
+
+    //서버에서 데이터를 json으로 파싱하여 가져오는 추상메소드
+    @GET("/BuddyMember/loadDB.php")
+    Call<ArrayList<Member_Item>> postDataToServermember();
+
+
+    ///////////로그인 확인
+    @FormUrlEncoded
+    @POST("/BuddyMember/loadLogin.php")
+    Call<Member_Item> User(@Field("userid")String userid, @Field("userpw") String userpassword);
+
+
 
 }
