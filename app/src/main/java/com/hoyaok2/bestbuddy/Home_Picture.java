@@ -11,7 +11,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
 public class Home_Picture extends Fragment {
+
+    FloatingActionButton button;
+
 
 
     @Override

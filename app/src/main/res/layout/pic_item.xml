@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/pic_cv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/pic_pic"
+                android:layout_width="wrap_content"
+                android:layout_height="400dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/home_houseicon"/>
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="400dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/pic_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="이곳이 좋아용"
+                android:textSize="30dp"
+                android:textStyle="bold"
+                android:textColor="@color/black" />
+
+            <ToggleButton
+                android:id="@+id/pic_favor"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/favorite_checklist"
+                android:textOn="   "
+                android:textOff=" "/>
+
+        </LinearLayout>
+        <TextView
+            android:id="@+id/pic_subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="놀러오세요"
+            android:layout_toRightOf="@id/cv"
+            android:layout_below="@+id/pic_title"
+            android:textColor="@color/black"
+            android:textSize="30dp"/>
+
+
+    </LinearLayout>
+
+
+
+
+
+
+</androidx.cardview.widget.CardView>
