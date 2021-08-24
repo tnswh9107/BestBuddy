@@ -1,14 +1,16 @@
 package com.hoyaok2.bestbuddy;
 
-import android.os.Bundle;
-
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
-
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 
-import android.view.View;
+import android.os.Bundle;
+import android.util.Log;
+import android.widget.CompoundButton;
+import android.widget.Switch;
+import android.widget.Toast;
+
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 
 public class Mypage_Setting extends AppCompatActivity {
 
@@ -16,16 +18,29 @@ public class Mypage_Setting extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mypage__setting);
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+//        Switch switchButton=findViewById(R.id.mypage_switchbutton_setting2);
+//
+//        switchButton.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+//            @Override
+//            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+//                if (isChecked){
+//                    FirebaseMessaging.getInstance().getToken().addOnCompleteListener(new OnCompleteListener<String>() {
+//                        @Override
+//                        public void onComplete(@NonNull Task<String> task) {
+//                            if(!task.isSuccessful()){
+//                                Toast.makeText(Mypage_Setting.this, "앱 등록실패", Toast.LENGTH_SHORT).show();
+//                                return;
+//                            }
+//                            String token=task.getResult();
+//
+//                            Toast.makeText(Mypage_Setting.this, ""+token, Toast.LENGTH_SHORT).show();
+//                            Log.i("TOKEN",token);
+//
+//                        }
+//                    });
+//                }
+//            }
+//        });
     }
 }
