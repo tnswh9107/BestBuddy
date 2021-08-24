@@ -61,7 +61,7 @@
                         android:textStyle="bold" />
 
                     <EditText
-                        android:id="@+id/play_name"
+                        android:id="@+id/pic_title"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="이 사진의 메인 제목을 작성해주세요"
@@ -77,30 +77,12 @@
                         android:textStyle="bold" />
 
                     <EditText
-                        android:id="@+id/play_story"
+                        android:id="@+id/pic_subtitle"
                         android:layout_width="match_parent"
                         android:layout_height="40dp"
                         android:hint="이 사진에 대해 이야기 해주세요"
                         android:maxLength="30"
                         android:singleLine="true" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="15dp"
-                        android:text="위치 확인하기"
-                        android:textSize="20dp"
-                        android:textStyle="bold" />
-                    <com.google.android.gms.maps.MapView
-                        android:id="@+id/pic_map"
-                        android:layout_width="match_parent"
-                        android:layout_height="400dp"/>
-
-
-
-
-
-
 
 
                     <RelativeLayout

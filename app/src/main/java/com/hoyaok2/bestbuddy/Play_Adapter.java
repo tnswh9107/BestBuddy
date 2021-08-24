@@ -66,7 +66,8 @@ public class Play_Adapter extends RecyclerView.Adapter {
     }
 
     @Override
-    public int getItemCount() {
+    public int getItemCount()
+    {
         return items.size();
     }
 

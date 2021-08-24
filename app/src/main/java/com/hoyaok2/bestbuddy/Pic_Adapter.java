@@ -20,6 +20,8 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
+import com.bumptech.glide.Glide;
+
 import java.util.ArrayList;
 
 import retrofit2.Call;
@@ -30,7 +32,7 @@ import retrofit2.Retrofit;
 public class Pic_Adapter extends RecyclerView.Adapter{
 
     Context context;
-    ArrayList<Pic_Item> items= new ArrayList<>();
+    ArrayList<Pic_Item> items;
 
     public Pic_Adapter(Context context,ArrayList<Pic_Item> items){
         this.context = context;
@@ -48,11 +50,26 @@ public class Pic_Adapter extends RecyclerView.Adapter{
     @Override
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
 
+        VH vh=(VH)holder;
+
+        Pic_Item item = items.get(position);
+
+        ((VH) holder).title.setText(item.title);
+        ((VH) holder).subtitle.setText(item.subtitle);
+
+        String imgUrl="http://tnswh9107.dothome.co.kr/BuddyPicture/"+item.file;
+
+
+        Glide.with(context).load(imgUrl).into(((VH) holder).iv);
+
+        if (item.favor==0) ((VH) holder).favor.setChecked(false);
+        else ((VH) holder).favor.setChecked(true);
     }
 
     @Override
-    public int getItemCount() {
-        return 0;
+    public int getItemCount()
+    {
+        return items.size();
     }
 
     class VH extends RecyclerView.ViewHolder{
@@ -98,12 +115,12 @@ public class Pic_Adapter extends RecyclerView.Adapter{
                 public void onClick(View v) {
                     int position = getLayoutPosition();
 
-//                    String pic = items.get(position).file;
+                    String pic = items.get(position).file;
                     String title = items.get(position).title;
                     String subtitle = items.get(position).subtitle;
 
                     Intent intent = new Intent(context,Play_Show.class);
-//                    intent.putExtra("pic",pic);
+                    intent.putExtra("pic",pic);
                     intent.putExtra("title",title);
                     intent.putExtra("subtitle",subtitle);
 
@@ -117,7 +134,7 @@ public class Pic_Adapter extends RecyclerView.Adapter{
                 }
             });
 
-        }
+       }
 
 
     }

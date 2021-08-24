@@ -28,7 +28,7 @@ public class Home_Picture extends Fragment {
 
     FloatingActionButton button;
 
-    ArrayList<Pic_Item> items = new ArrayList<Pic_Item>();
+    ArrayList<Pic_Item> items = new ArrayList<>();
     RecyclerView recyclerView;
     Pic_Adapter pic_adapter;
     SwipeRefreshLayout refreshLayout;
@@ -60,7 +60,7 @@ public class Home_Picture extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        recyclerView = view.findViewById(R.id.recycler);
+        recyclerView = view.findViewById(R.id.pic_recycler);
         pic_adapter = new Pic_Adapter(getActivity(), items);
         recyclerView.setAdapter(pic_adapter);
 
@@ -75,16 +75,15 @@ public class Home_Picture extends Fragment {
         });
 
         String[] permission = new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE};
-        if (ActivityCompat.checkSelfPermission(getContext(), permission[0]) == PackageManager.PERMISSION_DENIED)
-            ;
+        if (ActivityCompat.checkSelfPermission(getContext(), permission[0]) == PackageManager.PERMISSION_DENIED);
         {
             ActivityCompat.requestPermissions(getActivity(), permission, 100);
         }
-        items.add(new Pic_Item(R.drawable.home_houseicon, " 아무거나 ", "옥이바보똥꼬"));
-        items.add(new Pic_Item(R.drawable.home_houseicon, " 아무거나 ", "옥이바보똥꼬"));
-        items.add(new Pic_Item(R.drawable.home_houseicon, " 아무거나 ", "옥이바보똥꼬"));
-        items.add(new Pic_Item(R.drawable.home_houseicon, " 아무거나 ", "옥이바보똥꼬"));
-        items.add(new Pic_Item(R.drawable.home_houseicon, " 아무거나 ", "옥이바보똥꼬"));
+//        items.add(new Pic_Item(R.drawable.home_houseicon, " 아무거나 ", "옥이바보똥꼬"));
+//        items.add(new Pic_Item(R.drawable.home_houseicon, " 아무거나 ", "옥이바보똥꼬"));
+//        items.add(new Pic_Item(R.drawable.home_houseicon, " 아무거나 ", "옥이바보똥꼬"));
+//        items.add(new Pic_Item(R.drawable.home_houseicon, " 아무거나 ", "옥이바보똥꼬"));
+//        items.add(new Pic_Item(R.drawable.home_houseicon, " 아무거나 ", "옥이바보똥꼬"));
     }
 
     @Override
@@ -115,6 +114,5 @@ public class Home_Picture extends Fragment {
 
             }
         });
-
-    }
+  }
 }
