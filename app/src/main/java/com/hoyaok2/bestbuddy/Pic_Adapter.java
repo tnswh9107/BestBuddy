@@ -74,11 +74,11 @@ public class Pic_Adapter extends RecyclerView.Adapter{
                 public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                     int position = getLayoutPosition();
                     Pic_Item item = items.get(position);
-                    item.favor = isChecked? 1:0;
+//                    item.favor = isChecked? 1:0;
 
                     Retrofit retrofit = Retrofit_Helper.getRetrofitInstanceGson();
                     Retrofit_Service retrofit_service = retrofit.create(Retrofit_Service.class);
-                    Call<Pic_Item> call = retrofit_service.updateData("updateFavor.php",item);
+                    Call<Pic_Item> call = retrofit_service.updateDataPicture("updateFavor.php",item);
                     call.enqueue(new Callback<Pic_Item>() {
                         @Override
                         public void onResponse(Call<Pic_Item> call, Response<Pic_Item> response) {
@@ -98,12 +98,12 @@ public class Pic_Adapter extends RecyclerView.Adapter{
                 public void onClick(View v) {
                     int position = getLayoutPosition();
 
-                    String pic = items.get(position).file;
+//                    String pic = items.get(position).file;
                     String title = items.get(position).title;
                     String subtitle = items.get(position).subtitle;
 
                     Intent intent = new Intent(context,Play_Show.class);
-                    intent.putExtra("pic",pic);
+//                    intent.putExtra("pic",pic);
                     intent.putExtra("title",title);
                     intent.putExtra("subtitle",subtitle);
 

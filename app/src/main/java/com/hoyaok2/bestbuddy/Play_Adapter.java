@@ -98,7 +98,7 @@ public class Play_Adapter extends RecyclerView.Adapter {
 
                     Retrofit retrofit =Retrofit_Helper.getRetrofitInstanceGson();
                     Retrofit_Service retrofit_service = retrofit.create(Retrofit_Service.class);
-                    Call<Play_item> call = retrofit_service.updateData("updateFavor.php",item);
+                    Call<Play_item> call = retrofit_service.updataDataPlay("updateFavor.php",item);
                     call.enqueue(new Callback<Play_item>() {
                         @Override
                         public void onResponse(Call<Play_item> call, Response<Play_item> response) {

@@ -81,8 +81,7 @@ public class Home_Play extends Fragment {
         });
 
         String[] permissions = new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE};
-        if (ActivityCompat.checkSelfPermission(getContext(), permissions[0]) == PackageManager.PERMISSION_DENIED)
-            ;
+        if (ActivityCompat.checkSelfPermission(getContext(), permissions[0]) == PackageManager.PERMISSION_DENIED) ;
         {
             ActivityCompat.requestPermissions(getActivity(), permissions, 100);
         }

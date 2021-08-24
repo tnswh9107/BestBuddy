@@ -11,7 +11,7 @@ public class Play_item {
     String file;
     int favor;
 
-    public Play_item() {
+    public Play_item(int home_houseicon, String s, String 옥이바보똥꼬) {
     }
 
     public Play_item(int no, String pic, String title, String subtitle, String price, String phone, String file, int favor) {

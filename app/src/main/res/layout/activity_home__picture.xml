@@ -22,7 +22,7 @@
     </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/pic_addplay"
+        android:id="@+id/pic_addpic"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/play_writeicon"
