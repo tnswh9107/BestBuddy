@@ -58,26 +58,26 @@ public class Makemember extends AppCompatActivity {
         memsign.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String userid = memid.getText().toString();
-                String userpw = mempw.getText().toString();
+                String userID = memid.getText().toString();
+                String userPassword = mempw.getText().toString();
 //                String userpwc = mempwc.getText().toString();
-                String usernicname = memnicname.getText().toString();
+                String userName = memnicname.getText().toString();
 
-                if (userid.equals("")||userpw.equals("")||usernicname.equals("")){
+                if (userID.equals("")||userPassword.equals("")||userName.equals("")){
                     Toast.makeText(Makemember.this, "모두 입력해주세요", Toast.LENGTH_SHORT).show();
                     return;
                 }
-                if (userid.length()<=1){
+                if (userID.length()<=1){
                     Toast.makeText(Makemember.this, "Id는 6글자 이상 가능합니다", Toast.LENGTH_SHORT).show();
                 }
-                if (userpw.length()<=1){
+                if (userPassword.length()<=1){
                     Toast.makeText(Makemember.this, "비밀번호는 8글자 가능합니다", Toast.LENGTH_SHORT).show();
                 }
 //                if (userpw!=userpwc)
 //                {
 //                    Toast.makeText(Makemember.this, "비밀번호가 일치 하지 않습니다 다시확인해주세요", Toast.LENGTH_SHORT).show();
 //                }
-                if (usernicname.length()<=1)
+                if (userName.length()<=1)
                 {
                     Toast.makeText(Makemember.this, "닉네임은 2글자 이상 가능합니다.", Toast.LENGTH_SHORT).show();
                 }
@@ -93,10 +93,10 @@ public class Makemember extends AppCompatActivity {
                 }
 
                 Map<String,String> dataPart = new HashMap<>();
-                dataPart.put("userid",userid);
-                dataPart.put("userpw",userpw);
+                dataPart.put("userid",userID);
+                dataPart.put("userpw",userPassword);
 //                dataPart.put("userpwc",userpwc);
-                dataPart.put("usernicname",usernicname);
+                dataPart.put("usernicname",userName);
 
                 Call<String> call=retrofit_service_signup.postDataToServermember(dataPart,filePart);
                 call.enqueue(new Callback<String>() {

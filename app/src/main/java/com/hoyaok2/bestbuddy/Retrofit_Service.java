@@ -58,7 +58,7 @@ public interface Retrofit_Service {
     ///////////로그인 확인
     @FormUrlEncoded
     @POST("/BuddyMember/loadLogin.php")
-    Call<Member_Item> User(@Field("userid")String userid, @Field("userpw") String userpassword);
+    Call<Member_Item> User(@Field("userID")String userID, @Field("userPassword") String userPassword);
 
 
     ////////////////////////////////////로그인 입력

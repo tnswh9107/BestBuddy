@@ -78,7 +78,7 @@ public class Pic_Add extends AppCompatActivity {
         dataPart.put("subtitle",subtitle);
 
         // Play(ReTrofit) => 서버
-        Call<String> call = retrofit_service.postDataToServer(dataPart,filePart);
+        Call<String> call = retrofit_service.postDataToServerpicture(dataPart,filePart);
         call.enqueue(new Callback<String>() {
             @Override
             public void onResponse(Call<String> call, Response<String> response) {

@@ -4,29 +4,21 @@ public class Member_Item {
 
 
     int num;
-    String id;
-    String pw;
-    String pwc;
+    String userID;
+    String userPassword;
+    String userName;
     String file;
-    String nicname;
+    String pwc;
 
     public Member_Item() {
     }
 
-    public Member_Item(int num, String id, String pw, String pwc, String file, String nicname) {
+    public Member_Item(int num, String userID, String userPassword, String userName, String file, String pwc) {
         this.num = num;
-        this.id = id;
-        this.pw = pw;
-        this.pwc = pwc;
+        this.userID = userID;
+        this.userPassword = userPassword;
+        this.userName = userName;
         this.file = file;
-        this.nicname = nicname;
+        this.pwc = pwc;
     }
-
-
-
-
-
-
-
-
 }
