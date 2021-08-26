@@ -1,7 +1,8 @@
 plugins {
     id 'com.android.application'
+    id 'com.google.gms.google-services'
 }
-
+//apply plugin: 'com.google.gms.google-services'
 android {
     compileSdkVersion 30
     buildToolsVersion "30.0.3"
@@ -62,5 +63,11 @@ dependencies {
     implementation "com.kakao.sdk:v2-user:2.6.0" // 카카오 로그인
     implementation "com.kakao.sdk:v2-talk:2.6.0" // 친구, 메시지(카카오톡)
     implementation "com.kakao.sdk:v2-link:2.6.0" // 메시지(카카오링크)
+
+    //Firebase core platform livrary
+    implementation platform('com.google.firebase:firebase-bom:28.4.0')
+
+    //Firebase Cloud messgin SDK library
+    implementation 'com.google.firebase:firebase-messaging'
 
 }

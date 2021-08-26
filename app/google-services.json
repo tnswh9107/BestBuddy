@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "942489753714",
+    "project_id": "bestbuddymsg",
+    "storage_bucket": "bestbuddymsg.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:942489753714:android:5b931f732eb510fc830aeb",
+        "android_client_info": {
+          "package_name": "com.hoyaok2.bestbuddy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "942489753714-v13n083qeqb0jfpcouu2hrpaca4oaq2h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDrPbKYqw2mmW9jMEJRgLvNMvgvyjPfmNM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "942489753714-v13n083qeqb0jfpcouu2hrpaca4oaq2h.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
