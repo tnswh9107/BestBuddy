@@ -124,6 +124,9 @@ public class Play_Adapter extends RecyclerView.Adapter {
                     String subtitle = items.get(position).subtitle;
                     String price = items.get(position).price;
                     String phone = items.get(position).phone;
+                    String usernickname = items.get(position).usernickname;
+                    String userprofile = items.get(position).userprofile;
+
 
 
                     Intent intent = new Intent(context,Play_Show.class);
@@ -132,6 +135,8 @@ public class Play_Adapter extends RecyclerView.Adapter {
                     intent.putExtra("subtitle",subtitle);
                     intent.putExtra("price",price);
                     intent.putExtra("phone",phone);
+                    intent.putExtra("usernickname",usernickname);
+                    intent.putExtra("userprofile",userprofile);
 
                     //클릭시 애니메이션 효과
                     if (Build.VERSION.SDK_INT>=Build.VERSION_CODES.LOLLIPOP){

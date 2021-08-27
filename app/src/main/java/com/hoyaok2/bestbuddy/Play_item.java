@@ -9,6 +9,8 @@ public class Play_item {
     String price;
     String phone;
     String file;
+    String usernickname;
+    String userprofile;
     int favor;
 
     public Play_item(int home_houseicon, String s, String 옥이바보똥꼬) {

@@ -17,6 +17,8 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.messaging.FirebaseMessaging;
 
+import de.hdodenhof.circleimageview.CircleImageView;
+
 public class Play_Show extends AppCompatActivity {
 
 //    FCM작업할 것 3단계
@@ -26,8 +28,9 @@ public class Play_Show extends AppCompatActivity {
 
 //    먼저저
 
-   ImageView showiv;
-    TextView showtitle, showsub, showprice, showphone;
+    CircleImageView showprofile;
+    ImageView showiv;
+    TextView showtitle, showsub, showprice, showphone, shownickname;
 
 
     @Override
@@ -40,6 +43,9 @@ public class Play_Show extends AppCompatActivity {
         showsub = findViewById(R.id.play_show_story);
         showprice = findViewById(R.id.play_pay);
         showphone = findViewById(R.id.play_phon);
+        showprofile = findViewById(R.id.play_profile);
+        shownickname = findViewById(R.id.play_nickname);
+
 
         Intent intent = getIntent();
 
@@ -48,13 +54,14 @@ public class Play_Show extends AppCompatActivity {
         String subtitle = intent.getStringExtra("subtitle");
         String price = intent.getStringExtra("price");
         String phone = intent.getStringExtra("phone");
+        String usernickname = intent.getStringExtra("usernickname");
+        String userprofile = intent.getStringExtra("userprofile");
 
 
         String imgUrl = "http://tnswh9107.dothome.co.kr/BuddyPlay/" + pic;
 
         Log.d("test", imgUrl);
 
-//        Log.d("쪼매니 혜니",)
 
         if (imgUrl == null) Glide.with(this).load(R.drawable.noimage).into(showiv);
         else Glide.with(this).load(imgUrl).into(showiv);
@@ -63,6 +70,8 @@ public class Play_Show extends AppCompatActivity {
         showsub.setText(subtitle);
         showprice.setText(price);
         showphone.setText(phone);
+        shownickname.setText(usernickname);
+        Glide.with(this).load(userprofile).into(showprofile);
 
         if (Build.VERSION.SDK_INT > Build.VERSION_CODES.LOLLIPOP) {
             showiv.setTransitionName("PlayShow");
