@@ -67,7 +67,7 @@ public class Login_Joy extends AppCompatActivity {
                         if (item != null) {
                             G.userID = item.userID;
                             G.nickname = item.userPassword;
-                            G.profile = "http://tnswh9107.dothome.co.kr/BuddyLogin/" + item.file;
+                            G.profile = "http://tnswh9107.dothome.co.kr/BuddyMember/" + item.file;
 
                             Toast.makeText(Login_Joy.this, "환영합니다", Toast.LENGTH_SHORT).show();
                             startActivity(new Intent(Login_Joy.this, MainActivity.class));

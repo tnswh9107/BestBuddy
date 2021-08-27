@@ -93,10 +93,10 @@ public class Makemember extends AppCompatActivity {
                 }
 
                 Map<String,String> dataPart = new HashMap<>();
-                dataPart.put("userid",userID);
-                dataPart.put("userpw",userPassword);
+                dataPart.put("userID",userID);
+                dataPart.put("userPassword",userPassword);
 //                dataPart.put("userpwc",userpwc);
-                dataPart.put("usernicname",userName);
+                dataPart.put("userName",userName);
 
                 Call<String> call=retrofit_service_signup.postDataToServermember(dataPart,filePart);
                 call.enqueue(new Callback<String>() {
