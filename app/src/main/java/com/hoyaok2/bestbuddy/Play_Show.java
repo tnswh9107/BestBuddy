@@ -72,25 +72,24 @@ public class Play_Show extends AppCompatActivity {
     }
 
     public void Play_FCMmessage(View view) {
-        FirebaseMessaging.getInstance().getToken().addOnCompleteListener(new OnCompleteListener<String>() {
-            @Override
-            public void onComplete(@NonNull Task<String> task) {
-                if (!task.isSuccessful()) {
-                    Toast.makeText(Play_Show.this, "앱 등록 실패", Toast.LENGTH_SHORT).show();
-                    return;
-                }
-
-                String token = task.getResult(); //토큰값 결과 얻어오기
-
-                //원래는 token값을 웹서버에 보내서 DB에 저장해 놓아야함
-                //추후 token 값을 dothme 값은 웹서버에 사용하기 위해 Log로 출력해보기
-                //토스트와 Logcat모두 출력
-                Toast.makeText(Play_Show.this, "" + token, Toast.LENGTH_SHORT).show();
-                Log.i("TOKEN", token);
-
-            }
-
-        });
-
+//        FirebaseMessaging.getInstance().getToken().addOnCompleteListener(new OnCompleteListener<String>() {
+//            @Override
+//            public void onComplete(@NonNull Task<String> task) {
+//                if (!task.isSuccessful()) {
+//                    Toast.makeText(Play_Show.this, "앱 등록 실패", Toast.LENGTH_SHORT).show();
+//                    return;
+//                }
+//
+//                String token = task.getResult(); //토큰값 결과 얻어오기
+//
+//                //원래는 token값을 웹서버에 보내서 DB에 저장해 놓아야함
+//                //추후 token 값을 dothme 값은 웹서버에 사용하기 위해 Log로 출력해보기
+//                //토스트와 Logcat모두 출력
+//                Toast.makeText(Play_Show.this, "" + token, Toast.LENGTH_SHORT).show();
+//                Log.i("TOKEN", token);
+//
+//            }
+//
+//        });
     }
 }

@@ -98,6 +98,7 @@ public interface Retrofit_Service {
                                   @Part MultipartBody.Part filePart);
 
 
+
     //서버에서 데이터를 json으로 파싱하여 가져오는 추상메소드
     @GET("/BuddyPicture/loadDB.php")
     Call<ArrayList<Pic_Item>> loadDataFromServerpicture();

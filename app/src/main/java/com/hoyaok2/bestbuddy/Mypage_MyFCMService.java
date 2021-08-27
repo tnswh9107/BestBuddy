@@ -30,7 +30,6 @@ public class Mypage_MyFCMService extends FirebaseMessagingService {
 
         //알림을 제어하고 싶다면 직접 알림객체를 이곳에서 설계
         NotificationManager notificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
-
         NotificationCompat.Builder builder = null;
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O){
             NotificationChannel channel = new  NotificationChannel("ch1","push Chennel",NotificationManager.IMPORTANCE_HIGH);
@@ -44,7 +43,7 @@ public class Mypage_MyFCMService extends FirebaseMessagingService {
 
         //FCM서버로 부터 전달되어온 알림제목, 알림메세지를 얻어오기
         //onMessageReceied() 메소드의 파라미터 전달되어온 RemoteMessage remoteMessage(원격메세지)가 정보를 가지고있음
-        String notiTitle = "title";     //알림정보가 없을때 기본제목
+        String notiTitle = "title"+G.nickname;     //알림정보가 없을때 기본제목
         String notiText = "message";    //알림정보가 없을때 기본글씨
 
         if(remoteMessage.getNotification()!=null){
@@ -65,4 +64,3 @@ public class Mypage_MyFCMService extends FirebaseMessagingService {
 
     }
 }
-

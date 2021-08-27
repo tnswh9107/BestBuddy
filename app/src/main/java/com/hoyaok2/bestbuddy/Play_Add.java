@@ -97,6 +97,8 @@ public class Play_Add extends AppCompatActivity {
         String subtitle = story.getText().toString();
         String price = pay.getText().toString();
         String phone = phon.getText().toString();
+        String usernickname = G.nickname;
+        String userprofile = G.profile;
 
         Retrofit retrofit = Retrofit_Helper.getRetrofitInstanceScalars();
         Retrofit_Service retrofit_service = retrofit.create(Retrofit_Service.class);
@@ -117,6 +119,8 @@ public class Play_Add extends AppCompatActivity {
         dataPart.put("subtitle",subtitle);
         dataPart.put("price",price);
         dataPart.put("phone",phone);
+        dataPart.put("usernickname",usernickname);
+        dataPart.put("userprofile",userprofile);
 
         // Play(ReTrofit) => 서버
         Call<String> call = retrofit_service.postDataToServer(dataPart,filePart);
@@ -142,7 +146,6 @@ public class Play_Add extends AppCompatActivity {
     AlertDialog dialog;
     public void btnno(View view) {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-
         LayoutInflater inflater = getLayoutInflater();
         LinearLayout layout = (LinearLayout)inflater.inflate(R.layout.cancle_dialog,null);
 
