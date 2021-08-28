@@ -51,7 +51,7 @@ public class Play_Adapter extends RecyclerView.Adapter {
         VH vh=(VH)holder;
 
         Play_item item = items.get(position);
-        ((VH) holder).tvnictitle.setText(item.usernickname+"의 일상");
+
         ((VH) holder).tvTitle1.setText(item.title);
         ((VH) holder).tvTitle2.setText(item.subtitle);
 
@@ -89,7 +89,7 @@ public class Play_Adapter extends RecyclerView.Adapter {
             tvTitle1 = itemView.findViewById(R.id.play_Title);
             tvTitle2 = itemView.findViewById(R.id.play_title2);
             favor = itemView.findViewById(R.id.favor);
-            tvnictitle = itemView.findViewById(R.id.pic_nickname);
+
 
             //좋아요
             favor.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
@@ -128,7 +128,7 @@ public class Play_Adapter extends RecyclerView.Adapter {
                     String phone = items.get(position).phone;
                     String usernickname = items.get(position).usernickname;
                     String userprofile = items.get(position).userprofile;
-                    String nicktitle = items.get(position).usernickname;
+
 
 
 

@@ -22,6 +22,8 @@ import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.bumptech.glide.Glide;
 
+import org.w3c.dom.Text;
+
 import java.util.ArrayList;
 
 import retrofit2.Call;
@@ -53,7 +55,7 @@ public class Pic_Adapter extends RecyclerView.Adapter{
         VH vh=(VH)holder;
 
         Pic_Item item = items.get(position);
-
+        ((VH) holder).tvnictitle.setText(item.usernickname+"의 일상");
         ((VH) holder).title.setText(item.title);
         ((VH) holder).subtitle.setText(item.subtitle);
 
@@ -77,6 +79,7 @@ public class Pic_Adapter extends RecyclerView.Adapter{
         TextView title;
         TextView subtitle;
         ToggleButton favor;
+        TextView tvnictitle;
 
         public VH(@NonNull View itemView) {
             super(itemView);
@@ -85,6 +88,7 @@ public class Pic_Adapter extends RecyclerView.Adapter{
             title = itemView.findViewById(R.id.pic_title);
             subtitle = itemView.findViewById(R.id.pic_subtitle);
             favor = itemView.findViewById(R.id.pic_favor);
+            tvnictitle = itemView.findViewById(R.id.pic_nickname);
 
             favor.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
                 @Override
@@ -120,6 +124,7 @@ public class Pic_Adapter extends RecyclerView.Adapter{
                     String subtitle = items.get(position).subtitle;
                     String usernickname = items.get(position).usernickname;
                     String userprofile = items.get(position).userprofile;
+                    String nicktitle = items.get(position).usernickname;
 
                     Intent intent = new Intent(context,Pic_Show.class);
                     intent.putExtra("pic",pic);
