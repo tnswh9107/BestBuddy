@@ -5,6 +5,7 @@ import android.app.ActivityOptions;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
+import android.util.Log;
 import android.util.Pair;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -55,7 +56,7 @@ public class Pic_Adapter extends RecyclerView.Adapter{
         VH vh=(VH)holder;
 
         Pic_Item item = items.get(position);
-        ((VH) holder).usernickname.setText(item.usernickname+"의 일상");
+        ((VH) holder).usernicname.setText(item.usernicname+"의 일상");
         ((VH) holder).title.setText(item.title);
         ((VH) holder).subtitle.setText(item.subtitle);
 
@@ -79,7 +80,7 @@ public class Pic_Adapter extends RecyclerView.Adapter{
         TextView title;
         TextView subtitle;
         ToggleButton favor;
-        TextView usernickname;
+        TextView usernicname;
 
         public VH(@NonNull View itemView) {
             super(itemView);
@@ -88,7 +89,8 @@ public class Pic_Adapter extends RecyclerView.Adapter{
             title = itemView.findViewById(R.id.pic_title);
             subtitle = itemView.findViewById(R.id.pic_subtitle);
             favor = itemView.findViewById(R.id.pic_favor);
-            usernickname = itemView.findViewById(R.id.pic_nicTitle);
+            usernicname = itemView.findViewById(R.id.pic_nicTitle);
+
 
             favor.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
                 @Override
@@ -122,15 +124,14 @@ public class Pic_Adapter extends RecyclerView.Adapter{
                     String pic = items.get(position).file;
                     String title = items.get(position).title;
                     String subtitle = items.get(position).subtitle;
-                    String usernickname = items.get(position).usernickname;
+                    String usernickname = items.get(position).usernicname;
                     String userprofile = items.get(position).userprofile;
-                    String nicktitle = items.get(position).usernickname;
 
                     Intent intent = new Intent(context,Pic_Show.class);
                     intent.putExtra("pic",pic);
                     intent.putExtra("title",title);
                     intent.putExtra("subtitle",subtitle);
-                    intent.putExtra("usernickname",usernickname);
+                    intent.putExtra("usernicname",usernickname);
                     intent.putExtra("userprofile",userprofile);
 
                     //클릭시 애니메이션 효과

@@ -34,7 +34,7 @@ public class Pic_Show extends AppCompatActivity {
         String pic = intent.getStringExtra("pic");
         String title = intent.getStringExtra("title");
         String subtitle = intent.getStringExtra("subtitle");
-        String usernickname = intent.getStringExtra("usernickname");
+        String usernickname = intent.getStringExtra("usernicname");
         String userprofile = intent.getStringExtra("userprofile");
 
         String imgUrl = "http://tnswh9107.dothome.co.kr/BuddyPicture/" + pic;

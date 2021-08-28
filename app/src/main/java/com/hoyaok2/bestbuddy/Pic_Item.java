@@ -6,19 +6,19 @@ public class Pic_Item {
     String title;
     String subtitle;
     String file;
-    String usernickname;
+    String usernicname;
     String userprofile;
     int favor;
 
     public Pic_Item() {
     }
 
-    public Pic_Item(int no, String title, String subtitle, String file, String usernickname, String userprofile, int favor) {
+    public Pic_Item(int no, String title, String subtitle, String file, String usernicname, String userprofile, int favor) {
         this.no = no;
         this.title = title;
         this.subtitle = subtitle;
         this.file = file;
-        this.usernickname = usernickname;
+        this.usernicname = usernicname;
         this.userprofile = userprofile;
         this.favor = favor;
     }

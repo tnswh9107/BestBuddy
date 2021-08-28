@@ -80,7 +80,7 @@ public class Pic_Add extends AppCompatActivity {
         Map<String,String> dataPart = new HashMap<>();
         dataPart.put("title",title);
         dataPart.put("subtitle",subtitle);
-        dataPart.put("usernickname",usernickname);
+        dataPart.put("usernicname",usernickname);
         dataPart.put("userprofile",userprofile);
 
         // Play(ReTrofit) => 서버

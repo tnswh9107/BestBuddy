@@ -13,10 +13,7 @@ public class Play_item {
     String userprofile;
     int favor;
 
-    public Play_item(int home_houseicon, String s, String 옥이바보똥꼬) {
-    }
-
-    public Play_item(int no, String pic, String title, String subtitle, String price, String phone, String file, int favor) {
+    public Play_item(int no, String pic, String title, String subtitle, String price, String phone, String file, String usernickname, String userprofile, int favor) {
         this.no = no;
         this.pic = pic;
         this.title = title;
@@ -24,6 +21,13 @@ public class Play_item {
         this.price = price;
         this.phone = phone;
         this.file = file;
+        this.usernickname = usernickname;
+        this.userprofile = userprofile;
         this.favor = favor;
     }
+
+    public Play_item() {
+    }
+
+
 }
