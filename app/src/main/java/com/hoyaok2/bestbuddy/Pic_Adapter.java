@@ -79,7 +79,7 @@ public class Pic_Adapter extends RecyclerView.Adapter{
         TextView title;
         TextView subtitle;
         ToggleButton favor;
-        TextView tvnictitle;
+        TextView usernickname;
 
         public VH(@NonNull View itemView) {
             super(itemView);
@@ -88,7 +88,7 @@ public class Pic_Adapter extends RecyclerView.Adapter{
             title = itemView.findViewById(R.id.pic_title);
             subtitle = itemView.findViewById(R.id.pic_subtitle);
             favor = itemView.findViewById(R.id.pic_favor);
-            tvnictitle = itemView.findViewById(R.id.pic_nickname);
+            usernickname = itemView.findViewById(R.id.pic_nickname);
 
             favor.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
                 @Override

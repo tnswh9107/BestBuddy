@@ -43,6 +43,7 @@ public class Pic_Add extends AppCompatActivity {
 
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,6 +51,7 @@ public class Pic_Add extends AppCompatActivity {
         pic_iv = findViewById(R.id.pic_pic);
         pic_title = findViewById(R.id.pic_title);
         pic_subtitle = findViewById(R.id.pic_subtitle);
+
     }
 
 
@@ -57,6 +59,8 @@ public class Pic_Add extends AppCompatActivity {
     public void btnok(View view) {
         String title = pic_title.getText().toString();
         String subtitle = pic_subtitle.getText().toString();
+        String usernickname = G.nickname;
+        String userprofile = G.profile;
 
 
         Retrofit retrofit = Retrofit_Helper.getRetrofitInstanceScalars();
@@ -76,6 +80,8 @@ public class Pic_Add extends AppCompatActivity {
         Map<String,String> dataPart = new HashMap<>();
         dataPart.put("title",title);
         dataPart.put("subtitle",subtitle);
+        dataPart.put("usernickname",usernickname);
+        dataPart.put("userprofile",userprofile);
 
         // Play(ReTrofit) => 서버
         Call<String> call = retrofit_service.postDataToServerpicture(dataPart,filePart);
