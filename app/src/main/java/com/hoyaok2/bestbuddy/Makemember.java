@@ -64,7 +64,7 @@ public class Makemember extends AppCompatActivity {
 //                String userpwc = mempwc.getText().toString();
                 String userName = memnicname.getText().toString();
 
-                if (userID.equals("") || userPassword.equals("") || userName.equals("") || G.profile==null) {
+                if (userID.equals("") || userPassword.equals("") || userName.equals("")) {
                     Toast.makeText(Makemember.this, "모두 입력해주세요", Toast.LENGTH_SHORT).show();
                     return;
                 }
