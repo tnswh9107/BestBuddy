@@ -55,7 +55,7 @@ public class Pic_Adapter extends RecyclerView.Adapter{
         VH vh=(VH)holder;
 
         Pic_Item item = items.get(position);
-        ((VH) holder).tvnictitle.setText(item.usernickname+"의 일상");
+        ((VH) holder).usernickname.setText(item.usernickname+"의 일상");
         ((VH) holder).title.setText(item.title);
         ((VH) holder).subtitle.setText(item.subtitle);
 
@@ -88,7 +88,7 @@ public class Pic_Adapter extends RecyclerView.Adapter{
             title = itemView.findViewById(R.id.pic_title);
             subtitle = itemView.findViewById(R.id.pic_subtitle);
             favor = itemView.findViewById(R.id.pic_favor);
-            usernickname = itemView.findViewById(R.id.pic_nickname);
+            usernickname = itemView.findViewById(R.id.pic_nicTitle);
 
             favor.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
                 @Override
