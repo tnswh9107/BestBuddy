@@ -96,7 +96,7 @@
                             android:layout_width="100dp"
                             android:layout_height="50dp"
                             android:text="확인"
-                            android:onClick="btnpicok"/>
+                            android:onClick="btnok"/>
 
                         <Button
                             android:id="@+id/btnno"

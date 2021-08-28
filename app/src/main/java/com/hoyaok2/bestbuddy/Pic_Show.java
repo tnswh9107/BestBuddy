@@ -37,7 +37,7 @@ public class Pic_Show extends AppCompatActivity {
         String usernickname = intent.getStringExtra("usernickname");
         String userprofile = intent.getStringExtra("userprofile");
 
-        String imgUrl = "http://tnswh9107.dothome.co.kr/BuddyPlay/" + pic;
+        String imgUrl = "http://tnswh9107.dothome.co.kr/BuddyPicture/" + pic;
 
         if (imgUrl == null) Glide.with(this).load(R.drawable.noimage).into(piciv);
         else Glide.with(this).load(imgUrl).into(piciv);

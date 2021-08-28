@@ -119,7 +119,7 @@ public class Pic_Adapter extends RecyclerView.Adapter{
                     String title = items.get(position).title;
                     String subtitle = items.get(position).subtitle;
 
-                    Intent intent = new Intent(context,Play_Show.class);
+                    Intent intent = new Intent(context,Pic_Show.class);
                     intent.putExtra("pic",pic);
                     intent.putExtra("title",title);
                     intent.putExtra("subtitle",subtitle);

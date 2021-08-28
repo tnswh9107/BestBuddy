@@ -16,18 +16,10 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
-
-            <ImageView
-                android:id="@+id/pic_show_pic"
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="20dp" />
-
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center">
+                android:gravity="left">
 
                 <de.hdodenhof.circleimageview.CircleImageView
                     android:id="@+id/pic_profile"
@@ -39,14 +31,23 @@
 
                 <TextView
                     android:id="@+id/pic_nickname"
-                    android:layout_width="6dp"
-                    android:layout_height="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="30dp"
                     android:layout_toRightOf="@+id/pic_profile"
                     android:text="test"
                     android:textSize="16sp" />
             </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/pic_show_pic"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp" />
+
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -66,7 +67,7 @@
 
             <TextView
                 android:paddingTop="20dp"
-                 android:layout_width="match_parent"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:text="추가 설명"
@@ -81,27 +82,7 @@
                 android:maxLength="30"
                 android:singleLine="true"
                 android:textSize="15dp" />
-
-                <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="쪽지 보내기"
-                    android:textSize="20dp"
-                    android:textStyle="bold"
-                    android:onClick="pic_FCMmessage"
-                    app:backgroundTint="#FFC107"
-                    android:layout_marginTop="30dp"
-                    />
-
-
-
         </LinearLayout>
-
-
-
-
-
-            />
     </androidx.core.widget.NestedScrollView>
 
 </LinearLayout>
