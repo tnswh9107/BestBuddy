@@ -55,6 +55,7 @@ public class Makemember extends AppCompatActivity {
         memnicname=findViewById(R.id.memver_etnickname);
         memsign=findViewById(R.id.memver_signup);
 
+
         memsign.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -63,24 +64,24 @@ public class Makemember extends AppCompatActivity {
 //                String userpwc = mempwc.getText().toString();
                 String userName = memnicname.getText().toString();
 
-                if (userID.equals("")||userPassword.equals("")||userName.equals("")){
+                if (userID.equals("") || userPassword.equals("") || userName.equals("") || G.profile==null) {
                     Toast.makeText(Makemember.this, "모두 입력해주세요", Toast.LENGTH_SHORT).show();
                     return;
                 }
-                if (userID.length()<=1){
+                if (userID.length() <= 1) {
                     Toast.makeText(Makemember.this, "Id는 6글자 이상 가능합니다", Toast.LENGTH_SHORT).show();
                 }
-                if (userPassword.length()<=1){
+                if (userPassword.length() <= 1) {
                     Toast.makeText(Makemember.this, "비밀번호는 8글자 가능합니다", Toast.LENGTH_SHORT).show();
                 }
 //                if (userpw!=userpwc)
 //                {
 //                    Toast.makeText(Makemember.this, "비밀번호가 일치 하지 않습니다 다시확인해주세요", Toast.LENGTH_SHORT).show();
 //                }
-                if (userName.length()<=1)
-                {
+                if (userName.length() <= 1) {
                     Toast.makeText(Makemember.this, "닉네임은 2글자 이상 가능합니다.", Toast.LENGTH_SHORT).show();
                 }
+
 
                 Retrofit retrofit = Retrofit_Helper.getRetrofitInstanceScalars();
                 Retrofit_Service retrofit_service_signup = retrofit.create(Retrofit_Service.class);

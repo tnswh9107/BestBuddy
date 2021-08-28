@@ -16,7 +16,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BestBuddy"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Mypage_madeid"></activity>
+        <activity android:name=".Pic_Show"></activity>
+        <activity android:name=".Mypage_madeid" />
         <activity android:name=".Mypage_Call" />
         <activity android:name=".Mypage_Setting" />
         <activity android:name=".Mypage_favor" />
@@ -49,11 +50,9 @@
             android:required="false" /> <!-- API 키 등록 -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyCLbQHlrkFP-pAqU0hInsDTnR3qlVuPBlQ" />
-
-        <!--        <meta-data-->
-        <!--            android:name="com.kakao.sdk.AppKey"-->
-        <!--            android:value="@android:9d7ebbf2dc964849b72e79473249d4c2"/>-->
+            android:value="AIzaSyCLbQHlrkFP-pAqU0hInsDTnR3qlVuPBlQ" /> <!-- <meta-data -->
+        <!-- android:name="com.kakao.sdk.AppKey" -->
+        <!-- android:value="@android:9d7ebbf2dc964849b72e79473249d4c2"/> -->
         <activity android:name="com.kakao.sdk.auth.AuthCodeHandlerActivity">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
@@ -62,16 +61,15 @@
                 <category android:name="android.intent.category.BROWSABLE" />
 
                 <!-- Redirect URI: "kakao{NATIVE_APP_KEY}://oauth" -->
-                <!--                네이티브앱키 적용 : 네이티브 앱키 앞에 kakao 라는 문자를 붙인다.-->
+                <!-- 네이티브앱키 적용 : 네이티브 앱키 앞에 kakao 라는 문자를 붙인다. -->
                 <data
                     android:host="oauth"
                     android:scheme="kakao9d7ebbf2dc964849b72e79473249d4c2" />
-
             </intent-filter>
-        </activity>
-
-        <!--        FCM 메세지를 수신하는 서비스 등록-->
-        <service android:name=".Mypage_MyFCMService" android:exported="false">
+        </activity> <!-- FCM 메세지를 수신하는 서비스 등록 -->
+        <service
+            android:name=".Mypage_MyFCMService"
+            android:exported="false">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>

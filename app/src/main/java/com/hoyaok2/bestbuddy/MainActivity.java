@@ -34,13 +34,15 @@ public class MainActivity extends AppCompatActivity {
     NavigationView navigationView;
     ActionBarDrawerToggle drawerToggle;
 
-
+    //로그인시 접속
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        int login = 0;
+
 
 //        //keyhash 키해쉬값 설정
 //        String keyHash = Utility.INSTANCE.getKeyHash(this);
@@ -71,9 +73,7 @@ public class MainActivity extends AppCompatActivity {
                 drawerLayout.closeDrawers();
 
 
-
-                switch (item.getItemId())
-                {
+                switch (item.getItemId()) {
                     case R.id.house:
                         startActivity(new Intent(getApplicationContext(), Login_Joy.class));
                         drawerLayout.closeDrawer(navigationView);
@@ -91,8 +91,6 @@ public class MainActivity extends AppCompatActivity {
         fragments[0] = new Home_Main();
         tran.add(R.id.container, fragments[0]);
         tran.commit();
-
-
 
 
         //바텀 네비게이션 연결
@@ -142,11 +140,18 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.mypage:
                         if (fragments[4] == null) {
                             fragments[4] = new Home_Mypage();
-
                             tran.add(R.id.container, fragments[4]);
+                            tran.hide(fragments[4]);
                         }
-                        tran.show(fragments[4]);
-                        getSupportActionBar().setTitle("로그인");
+                        if (G.nickname!=null || G.userID!=null ){
+                            tran.show(fragments[4]);
+
+                        }else{
+                            Intent intent = new Intent(MainActivity.this,Login_Joy.class);
+                            startActivity(intent);
+                        }
+//                        tran.show(fragments[4]);
+//                        getSupportActionBar().setTitle("로그인");
                         break;
 
                 }
@@ -158,30 +163,26 @@ public class MainActivity extends AppCompatActivity {
         });        //바텀 네이게이션 연결 끝
 
 
-
         //지도 동작퍼미션
-        if (Build.VERSION.SDK_INT>=Build.VERSION_CODES.M)
-        {
-            if (checkSelfPermission(Manifest.permission.ACCESS_FINE_LOCATION)== PackageManager.PERMISSION_DENIED)
-            {
-                String[] permissions = new String[]{Manifest.permission.ACCESS_FINE_LOCATION,Manifest.permission.WRITE_EXTERNAL_STORAGE};
-                requestPermissions(permissions,0);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            if (checkSelfPermission(Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_DENIED) {
+                String[] permissions = new String[]{Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.WRITE_EXTERNAL_STORAGE};
+                requestPermissions(permissions, 0);
             }
         }
 
     } //oncreate 끝
 
-    public void clickSignupBtn(View view){
-        Intent intent = new Intent(this,Makemember.class);
+
+    public void clickSignupBtn(View view) {
+        Intent intent = new Intent(this, Makemember.class);
         startActivity(intent);
     }
 
-    public void clickLoginBtn(View view)
-    {
-        Intent intent = new Intent(this,Login_Joy.class);
+    public void clickLoginBtn(View view) {
+        Intent intent = new Intent(this, Login_Joy.class);
         startActivity(intent);
     }
-
 
 
 }

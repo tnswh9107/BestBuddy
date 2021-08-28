@@ -23,6 +23,8 @@ public class Home_Mypage extends Fragment {
     CircleImageView profile;
     Button favorlist,setting,call,made;
     TextView nickname,logout;
+    int mypage = 0;
+
 
 
     @Override
@@ -40,6 +42,11 @@ public class Home_Mypage extends Fragment {
         call = view.findViewById(R.id.mypage_call);
         made = view.findViewById(R.id.mypage_madeid);
 
+
+        if (mypage == 0)
+        {
+
+        }
 
         //클릭시 만들어지는 4개의 함수 찜한 목록, 환경설정 고객센터 계정관리 시작
         //찜한목록 시작

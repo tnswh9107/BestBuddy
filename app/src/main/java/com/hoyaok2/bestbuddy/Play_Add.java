@@ -13,6 +13,7 @@ import android.os.Bundle;
 import android.provider.MediaStore;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -41,6 +42,7 @@ public class Play_Add extends AppCompatActivity {
     TextView dialogtv;
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,6 +52,7 @@ public class Play_Add extends AppCompatActivity {
         story = findViewById(R.id.play_story);
         pay = findViewById(R.id.play_pay);
         phon = findViewById(R.id.play_phone);
+
     }
 
 
@@ -57,7 +60,9 @@ public class Play_Add extends AppCompatActivity {
     public void pic_upload(View view) {
         Intent intent = new Intent(Intent.ACTION_PICK);
         intent.setType("image/*");
+
         startActivityForResult(intent,10);
+
     }
     //절대경로 c+v
     String getRealPathFromUri(Uri uri){

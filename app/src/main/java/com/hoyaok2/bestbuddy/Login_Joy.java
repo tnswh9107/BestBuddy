@@ -28,6 +28,7 @@ import retrofit2.Retrofit;
 
 public class Login_Joy extends AppCompatActivity {
 
+    int loging = 0;
     String nickname;
     EditText login_id, login_pw;
     Button login_button, login_signup;

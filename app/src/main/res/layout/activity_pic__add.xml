@@ -18,11 +18,11 @@
 
             <ImageView
                 android:id="@+id/pic_pic"
-                android:layout_width="350dp"
+                android:layout_width="150dp"
                 android:layout_height="200dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="20dp"
-                android:background="@drawable/play_addpicture" />
+                android:background="@drawable/addpictur_icon" />
 
             <Button
                 android:id="@+id/pic_upload"
