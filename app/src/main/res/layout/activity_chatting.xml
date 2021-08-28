@@ -8,6 +8,7 @@
     tools:context=".Chatting">
 
     <ListView
+        android:id="@+id/listview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
@@ -21,23 +22,24 @@
         android:orientation="horizontal"
         android:padding="4dp"
         android:background="#03A9F4">
+
         <EditText
+            android:id="@+id/et"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/bg_edit"
             android:padding="10dp"
-            android:inputType="textImeMultiLine"
+            android:inputType="textMultiLine"
             android:maxLines="3"
             android:hint="input message"/>
         <Button
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:text="Send"
+            android:text="send"
             android:backgroundTint="#02E2FF"
             android:layout_marginLeft="8dp"
             android:onClick="clickSend"/>
-
 
     </LinearLayout>
 
