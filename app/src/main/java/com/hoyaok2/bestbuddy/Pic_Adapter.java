@@ -118,11 +118,15 @@ public class Pic_Adapter extends RecyclerView.Adapter{
                     String pic = items.get(position).file;
                     String title = items.get(position).title;
                     String subtitle = items.get(position).subtitle;
+                    String usernickname = items.get(position).usernickname;
+                    String userprofile = items.get(position).userprofile;
 
                     Intent intent = new Intent(context,Pic_Show.class);
                     intent.putExtra("pic",pic);
                     intent.putExtra("title",title);
                     intent.putExtra("subtitle",subtitle);
+                    intent.putExtra("usernickname",usernickname);
+                    intent.putExtra("userprofile",userprofile);
 
                     //클릭시 애니메이션 효과
                     if (Build.VERSION.SDK_INT>=Build.VERSION_CODES.LOLLIPOP){

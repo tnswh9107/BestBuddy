@@ -6,6 +6,9 @@ public class Pic_Item {
     String title;
     String subtitle;
     String file;
+    String usernickname;
+    String userprofile;
+
     int favor;
 
     public Pic_Item() {

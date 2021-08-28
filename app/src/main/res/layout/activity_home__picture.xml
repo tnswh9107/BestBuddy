@@ -40,6 +40,7 @@
             android:id="@+id/pic_recycler"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             android:orientation="vertical"
             android:padding="16dp"/>
     </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
