@@ -53,10 +53,11 @@ public class Chatting_Adapter extends BaseAdapter {
             itemView = inflater.inflate(R.layout.other_message,parent,false);
         }
 
-        CircleImageView civ=itemView.findViewById(R.id.naviv);
+        CircleImageView civ=itemView.findViewById(R.id.iv);
         TextView tvName = itemView.findViewById(R.id.tv_name);
         TextView tvMsg = itemView.findViewById(R.id.tv_msg);
         TextView tvTime = itemView.findViewById(R.id.tv_time);
+
 
         tvName.setText(item.name);
         tvMsg.setText(item.message);

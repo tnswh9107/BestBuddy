@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
     Fragment[] fragments = new Fragment[5];
     FragmentManager fragmentManager;
 
+
     //    드로우 네이게이션(사이드)
     DrawerLayout drawerLayout;
     NavigationView navigationView;
@@ -76,6 +77,26 @@ public class MainActivity extends AppCompatActivity {
                 switch (item.getItemId()) {
                     case R.id.house:
                         startActivity(new Intent(getApplicationContext(), Login_Joy.class));
+                        drawerLayout.closeDrawer(navigationView);
+                        break;
+                    case R.id.sea:
+                        startActivity(new Intent(getApplicationContext(), Login_Joy.class));
+                        drawerLayout.closeDrawer(navigationView);
+                        break;
+                    case R.id.mountain:
+                        startActivity(new Intent(getApplicationContext(), Login_Joy.class));
+                        drawerLayout.closeDrawer(navigationView);
+                        break;
+                    case R.id.map:
+                        startActivity(new Intent(getApplicationContext(), Login_Joy.class));
+                        drawerLayout.closeDrawer(navigationView);
+                        break;
+                    case R.id.review:
+                        startActivity(new Intent(getApplicationContext(), Login_Joy.class));
+                        drawerLayout.closeDrawer(navigationView);
+                        break;
+                    case R.id.chat:
+                        startActivity(new Intent(getApplicationContext(), Chatting_List.class));
                         drawerLayout.closeDrawer(navigationView);
                         break;
 
