@@ -9,6 +9,7 @@ public class Api_House_recyclerItem {
     public String addr2;    //상세주소
     public String mapX;    //맵x
     public String mapY;    //맵y
+    public String tel;      //전화번호
     public String opne;     //영업상태
     public String close;    //폐업일자
     public String roomcnt;     //예약방

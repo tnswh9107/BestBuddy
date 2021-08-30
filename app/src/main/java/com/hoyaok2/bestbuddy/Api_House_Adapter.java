@@ -1,8 +1,6 @@
 package com.hoyaok2.bestbuddy;
 
-import android.app.ProgressDialog;
 import android.content.Context;
-import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -29,7 +27,7 @@ public class Api_House_Adapter extends RecyclerView.Adapter {
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(context);
 
-        View itemView = inflater.inflate(R.layout.api_houserecycleritem,parent,false);
+        View itemView = inflater.inflate(R.layout.api_house_recycleritem,parent,false);
         VH holder = new VH(itemView);
 
 
