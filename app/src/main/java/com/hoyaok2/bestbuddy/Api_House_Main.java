@@ -64,7 +64,7 @@ public class Api_House_Main extends AppCompatActivity {
                                 break;
                             case XmlPullParser.START_TAG:
                                 tagName = xpp.getName();
-                                if (tagName.equals("row")) {
+                                if (tagName.equals("list")) {
                                     item = new Api_House_recyclerItem();
                                 } else if (tagName.equals("beachAddr")) {
                                     xpp.next();
@@ -113,7 +113,7 @@ public class Api_House_Main extends AppCompatActivity {
 
                                 case XmlPullParser.END_TAG:
                                     String tagName2 = xpp.getName();
-                                    if (tagName2.equals("row")){
+                                    if (tagName2.equals("list")){
                                         if (item.imagePath!=null){
                                             items.add(item);
                                         }

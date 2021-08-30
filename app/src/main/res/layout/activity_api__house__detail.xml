@@ -15,7 +15,7 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
             <TextView
-                android:id="@+id/house_detailname"
+                android:id="@+id/yeosu_beachNm"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/black"
@@ -24,11 +24,11 @@
                 android:textSize="30sp"
                 android:layout_marginTop="8dp"
                 android:paddingTop="10dp"
-                android:text="detailname"/>
+                android:text="beachNm"/>
 
 
             <ImageView
-                android:id="@+id/house_detailiv"
+                android:id="@+id/yeosu_imagePath"
                 android:layout_width="match_parent"
                 android:layout_height="250dp"
                 android:src="@drawable/test"
@@ -60,29 +60,41 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
-                <TextView
-                    android:id="@+id/house_detailaddr1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="지역"
-                    android:textSize="20sp"
-                    android:layout_marginLeft="16dp"
-                    android:textColor="#8C8888"/>
 
                 <TextView
-                    android:id="@+id/house_detailaddr2"
+                    android:id="@+id/yeosu_beachAddr"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="상세주소"
+                    android:layout_marginLeft="16dp"
+                    android:text="해수욕장 명"
+                    android:textColor="#8C8888"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/yeosu_detailInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="해수욕장 설명"
                     android:textSize="18sp"
                     android:layout_marginLeft="16dp"
                     android:textColor="#8C8888"/>
 
                 <TextView
-                    android:id="@+id/house_detailintro"
+                    android:id="@+id/yeosu_beachPhone1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="영업 유무"
+                    android:text="해수욕장 번호"
+                    android:textSize="14sp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginBottom="8dp" />
+
+                <TextView
+                    android:id="@+id/yeosu_homepage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="해수욕장 홈페이지"
                     android:textSize="14sp"
                     android:layout_marginLeft="16dp"
                     android:layout_marginTop="4dp"
@@ -90,31 +102,31 @@
                     android:layout_marginBottom="8dp" />
 
 
+
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="vertical">
 
 
                 <TextView
-                    android:id="@+id/house_detailresveCl"
+                    android:id="@+id/yeosu_openDate"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="resveCl-실시간 예약 구분"
+                    android:text="해수욕장 오픈일"
                     android:padding="8dp"
                     android:textSize="16sp"
                     android:layout_marginLeft="16dp"
                     android:textColor="#E91E63"/>
 
                 <TextView
-                    android:id="@+id/house_detailtel"
+                    android:id="@+id/yeosu_traffic"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="right"
-                    android:padding="8dp"
-                    android:text="tel-전화번호"
+                    android:padding="18dp"
+                    android:text="오는방법"
                     android:textColor="#A640A6"
                     android:textSize="16sp"
                     android:textStyle="bold" />

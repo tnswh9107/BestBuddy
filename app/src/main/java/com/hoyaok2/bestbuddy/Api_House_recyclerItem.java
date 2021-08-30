@@ -1,9 +1,9 @@
 package com.hoyaok2.bestbuddy;
 
 public class Api_House_recyclerItem {
-    public String beachAddr; //지역주소
+    public String beachAddr;  //지역주소
     public String beachNm;    //해수욕장 명
-    public String beachPhone1;    //해수욕장 번호
+    public String beachPhone1;     //해수욕장 번호
     public String detailInfo;    //해수욕장 설명
     public String homepage;    //해수욕장 홈페이지
     public String imagePath;    //이미지 사진
