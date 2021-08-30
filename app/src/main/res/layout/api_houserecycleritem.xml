@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="280dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginBottom="4dp"
+    android:layout_marginTop="4dp"
+    app:cardCornerRadius="20dp"
+    android:padding="30dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="8dp"
+        android:paddingBottom="8dp">
+
+        <ImageView
+            android:id="@+id/apihouse_iv"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:scaleType="center"
+            android:src="@drawable/test" />
+
+        <TextView
+            android:id="@+id/apihouse_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_below="@+id/apihouse_iv"
+            android:text="숙소 이름"
+            android:layout_marginLeft="14dp"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <ToggleButton
+            android:id="@+id/apihouse_tbfavor"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_below="@+id/apihouse_iv"
+            android:layout_gravity="right"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/favorite_checklist"
+            android:textOff=" "
+            android:textOn="  " />
+
+
+        <TextView
+            android:id="@+id/apihouse_lineintro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/apihouse_name"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="14dp"
+            android:text="Api 정보를 입력받는다"
+            android:textColor="#ff333333"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+
+</com.google.android.material.card.MaterialCardView>

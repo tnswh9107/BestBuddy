@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Api_House_Detail">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/house_detailname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textSize="30sp"
+                android:layout_marginTop="8dp"
+                android:paddingTop="10dp"
+                android:text="detailname"/>
+
+
+            <ImageView
+                android:id="@+id/house_detailiv"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:src="@drawable/test"
+                android:scaleType="centerCrop"
+                android:padding="8dp"
+                android:layout_marginTop="8dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/mapicon"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="4dp"
+                    android:onClick="house_detailmap"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="좌측 지도를 누르시면 예약하실 숙소위치를 알수 있습니다."
+                    android:paddingLeft="10dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:paddingTop="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/house_detailaddr1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="지역"
+                    android:textSize="20sp"
+                    android:layout_marginLeft="16dp"
+                    android:textColor="#8C8888"/>
+
+                <TextView
+                    android:id="@+id/house_detailaddr2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="상세주소"
+                    android:textSize="18sp"
+                    android:layout_marginLeft="16dp"
+                    android:textColor="#8C8888"/>
+
+                <TextView
+                    android:id="@+id/house_detailintro"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="영업 유무"
+                    android:textSize="14sp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginBottom="8dp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:id="@+id/house_detailresveCl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="resveCl-실시간 예약 구분"
+                    android:padding="8dp"
+                    android:textSize="16sp"
+                    android:layout_marginLeft="16dp"
+                    android:textColor="#E91E63"/>
+
+                <TextView
+                    android:id="@+id/house_detailtel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:padding="8dp"
+                    android:text="tel-전화번호"
+                    android:textColor="#A640A6"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

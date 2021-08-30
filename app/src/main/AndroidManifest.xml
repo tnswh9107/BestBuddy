@@ -16,7 +16,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BestBuddy"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Chatting_List"></activity>
+        <activity android:name=".Api_House_DetailMap"></activity>
+        <activity android:name=".Api_House_Detail" />
+        <activity android:name=".Api_House_Main" />
+        <activity android:name=".Chatting_List" />
         <activity android:name=".Chatting" />
         <activity android:name=".Pic_Show" />
         <activity android:name=".Mypage_madeid" />

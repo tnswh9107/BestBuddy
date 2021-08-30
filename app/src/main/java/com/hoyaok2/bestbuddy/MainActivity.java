@@ -76,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
 
                 switch (item.getItemId()) {
                     case R.id.house:
-                        startActivity(new Intent(getApplicationContext(), Login_Joy.class));
+                        startActivity(new Intent(getApplicationContext(), Api_House_Main.class));
                         drawerLayout.closeDrawer(navigationView);
                         break;
                     case R.id.sea:
