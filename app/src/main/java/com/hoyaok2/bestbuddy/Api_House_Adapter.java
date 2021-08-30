@@ -41,9 +41,9 @@ public class Api_House_Adapter extends RecyclerView.Adapter {
 
 
         Api_House_recyclerItem item = items.get(position);
-        ((VH) holder).name.setText(item.name+"의 일상");
-        ((VH) holder).lineintro.setText(item.lineintro);
-        Glide.with(context).load(item.houseingimg).into(((VH) holder).houseImg);
+        ((VH) holder).beachNm.setText(item.beachNm+"의 일상");
+        ((VH) holder).beachAddr.setText(item.beachAddr);
+        Glide.with(context).load(item.imagePath).into(((VH) holder).imagePath);
 
     }
 
@@ -54,17 +54,17 @@ public class Api_House_Adapter extends RecyclerView.Adapter {
 
     class VH extends RecyclerView.ViewHolder{
 
-        ImageView houseImg;
-        TextView name;
-        TextView lineintro;
+        ImageView imagePath;
+        TextView beachNm;
+        TextView beachAddr;
         ToggleButton tbFavor;
 
         public VH(@NonNull View itemView) {
             super(itemView);
 
-            houseImg = itemView.findViewById(R.id.apihouse_iv);
-            name = itemView.findViewById(R.id.apihouse_name);
-            lineintro = itemView.findViewById(R.id.apihouse_lineintro);
+            imagePath = itemView.findViewById(R.id.apihouse_iv);
+            beachNm = itemView.findViewById(R.id.apihouse_name);
+            beachAddr = itemView.findViewById(R.id.apihouse_lineintro);
             tbFavor = itemView.findViewById(R.id.apihouse_tbfavor);
 
             itemView.setOnClickListener(new View.OnClickListener() {
@@ -72,14 +72,10 @@ public class Api_House_Adapter extends RecyclerView.Adapter {
                 public void onClick(View v) {
                     int position=getLayoutPosition();
 
-                    String nameId = items.get(position).name; //상호명
-                    String lineintroId = items.get(position).lineintro;    //소개
-                    int houseingimgid = items.get(position).houseingimg;    //이미지
-//                    String induty = items.get(position).induty;    //업종
-//                    String addr1 = items.get(position).addr1;    //주소
-//                    String addr2 = items.get(position).addr2;    //상세주소
-//                    String mapX = items.get(position).mapX;    //맵x
-//                    String mapY = items.get(position).mapY;    //맵y
+                    String nameId = items.get(position).beachNm; //상호명
+                    String lineintroId = items.get(position).beachAddr;    //소개
+                    String houseingimgid = items.get(position).imagePath;    //이미지
+//
 
 //                    Intent intent = new Intent(context)
                 }
