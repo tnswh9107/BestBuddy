@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         style="@style/MyToolbar"
-        app:title="숙소찾기"
+        app:title="해수욕장"
         android:theme="@style/ToolbarTheme"/>
 
     <androidx.recyclerview.widget.RecyclerView

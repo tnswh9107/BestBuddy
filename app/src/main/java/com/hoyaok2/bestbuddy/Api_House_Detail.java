@@ -7,6 +7,7 @@ import android.app.ActivityOptions;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
+import android.text.Html;
 import android.util.Pair;
 import android.view.View;
 import android.widget.ImageView;
@@ -50,7 +51,7 @@ public class Api_House_Detail extends AppCompatActivity {
         String beachPhone1 = intent.getStringExtra("beachPhone1");     //해수욕장 번호
         String detailInfo1 = intent.getStringExtra("detailInfo");    //해수욕장 설명
         String homepage1 = intent.getStringExtra("homepage");    //해수욕장 홈페이지
-        String imagePath1 = intent.getStringExtra("imagePath1");    //이미지 사진
+        String imagePath1 = intent.getStringExtra("imagePath");    //이미지 사진
         String openDate1 = intent.getStringExtra("openDate");      //해수욕장 오픈일
         String traffic1 = intent.getStringExtra("traffic");     //오는방법
         mapX = intent.getStringExtra("mapX");     //mapx
@@ -60,13 +61,13 @@ public class Api_House_Detail extends AppCompatActivity {
         else Glide.with(this).load(imagePath1).into(imagePath);
 
 
-        beachAddr.setText(beachAddr1);
-        beachNm.setText(beachNm1);
-        beachPhone.setText(beachPhone1);
-        detailInfo.setText(detailInfo1);
-        homepage.setText(homepage1);
-        openDate.setText(openDate1);
-        traffic.setText(traffic1);
+        beachAddr.setText("주소 : "+beachAddr1);
+        beachNm.setText("해수욕장 설명 :"+beachNm1);
+        beachPhone.setText("해수욕장 번호 : "+beachPhone1);
+        detailInfo.setText(Html.fromHtml(detailInfo1));
+        homepage.setText(Html.fromHtml("홈페이지 주소 : "+homepage1));
+        openDate.setText("개장일 : "+openDate1);
+        traffic.setText(Html.fromHtml(traffic1));
 
 
 
@@ -84,5 +85,6 @@ public class Api_House_Detail extends AppCompatActivity {
         intent.putExtra("mapx", mapX);
         intent.putExtra("mapy", mapY);
         intent.putExtra("beachNm", beachName);
+        startActivity(intent);
     }
 }

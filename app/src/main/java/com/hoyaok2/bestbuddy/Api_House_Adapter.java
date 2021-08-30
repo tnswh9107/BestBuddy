@@ -46,7 +46,7 @@ public class Api_House_Adapter extends RecyclerView.Adapter {
 
 
         Api_House_recyclerItem item = items.get(position);
-        ((VH) holder).beachNm.setText(item.beachNm+"의 일상");
+        ((VH) holder).beachNm.setText(item.beachNm);
         ((VH) holder).beachAddr.setText(item.beachAddr);
         Glide.with(context).load(item.imagePath).into(((VH) holder).imagePath);
 
@@ -115,7 +115,6 @@ public class Api_House_Adapter extends RecyclerView.Adapter {
 
                 }
             });
-
 
         }
     }

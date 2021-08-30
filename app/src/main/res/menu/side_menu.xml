@@ -5,7 +5,7 @@
 <!--api이용하여 정보얻기-->
         <!--숙소찾기-->
         <item android:id="@+id/house"
-            android:title="숙소찾기"
+            android:title="해수욕장"
             android:icon="@drawable/nav_home"/>
         <!--바다-->
         <item android:id="@+id/sea"

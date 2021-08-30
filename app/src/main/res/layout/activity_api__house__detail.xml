@@ -50,7 +50,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="좌측 지도를 누르시면 예약하실 숙소위치를 알수 있습니다."
+                    android:text="좌측 지도를 누르시면 정확한 해수욕장 위치를 확인 할 수 있습니다."
                     android:paddingLeft="10dp"/>
 
             </LinearLayout>

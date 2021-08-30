@@ -40,7 +40,7 @@ public class Api_House_DetailMap extends AppCompatActivity {
                 Intent intent1 =getIntent();
                 String detailmapX = intent1.getStringExtra("mapx");
                 String detailmapY = intent1.getStringExtra("mapy");
-                String detailnameId = intent1.getStringExtra("mapId");
+                String detailnameId = intent1.getStringExtra("beachNm");
 
 
                 double lng=Double.parseDouble(detailmapX);  //경도
