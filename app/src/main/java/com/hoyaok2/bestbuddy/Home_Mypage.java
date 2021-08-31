@@ -15,6 +15,8 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
+
 import de.hdodenhof.circleimageview.CircleImageView;
 
 public class Home_Mypage extends Fragment {
@@ -43,10 +45,7 @@ public class Home_Mypage extends Fragment {
         made = view.findViewById(R.id.mypage_madeid);
 
 
-        if (mypage == 0)
-        {
 
-        }
 
         //클릭시 만들어지는 4개의 함수 찜한 목록, 환경설정 고객센터 계정관리 시작
         //찜한목록 시작
@@ -92,11 +91,13 @@ public class Home_Mypage extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        nickname = getActivity().findViewById(R.id.mypage_nickname);
+        profile = getActivity().findViewById(R.id.mypage_profile);
+        if(G.nickname!= null)
+        {
+            nickname.setText(G.nickname);
+            Glide.with(this).load(G.profile).into(profile);
+        }
     }
-
-
-
-
-
 
 }

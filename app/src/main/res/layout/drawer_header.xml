@@ -12,8 +12,7 @@
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:padding="4dp"
-        android:src="@drawable/profilenull"
-        android:onClick="clickimagelogin"/>
+        android:src="@drawable/profilenull" />
 
     <TextView
         android:id="@+id/drawer_nickname"
@@ -102,12 +101,12 @@
         android:id="@+id/mypage"
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:background="@drawable/mypageicon"
         android:layout_below="@+id/drawer_profile"
-        android:layout_toRightOf="@+id/signup"
         android:layout_marginLeft="85dp"
-        android:layout_marginTop="8dp"
-        android:onClick="clickmypage"/>
+        android:layout_marginTop="6dp"
+        android:layout_toRightOf="@+id/signup"
+        android:background="@drawable/mypageicon"
+        android:onClick="clickmypage" />
 
     <TextView
         android:layout_width="wrap_content"

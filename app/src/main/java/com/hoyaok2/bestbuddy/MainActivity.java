@@ -45,13 +45,11 @@ public class MainActivity extends AppCompatActivity {
     //로그인시 접속
 
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         int login = 0;
-
 
 
 //        //keyhash 키해쉬값 설정
@@ -105,8 +103,10 @@ public class MainActivity extends AppCompatActivity {
                         drawerLayout.closeDrawer(navigationView);
                         break;
                     case R.id.chat:
-                        startActivity(new Intent(getApplicationContext(), Chatting_List.class));
-                        drawerLayout.closeDrawer(navigationView);
+                       if (G.nickname != null) {
+                           startActivity(new Intent(getApplicationContext(), Chatting_List.class));
+                           drawerLayout.closeDrawer(navigationView);
+                       }else Toast.makeText(MainActivity.this, "로그인이 필요한 서비스입니다.", Toast.LENGTH_SHORT).show();
                         break;
 
                 }
@@ -170,11 +170,15 @@ public class MainActivity extends AppCompatActivity {
                         if (fragments[4] == null) {
                             fragments[4] = new Home_Mypage();
                             tran.add(R.id.container, fragments[4]);
+
                             tran.hide(fragments[4]);
                         }
                         if (G.nickname != null || G.userID != null) {
                             tran.show(fragments[4]);
-
+                            getSupportActionBar().setTitle("마이페이지");
+//                        } else if (G.nickname == null || G.userID == null) {
+//                            tran.show(fragments[4]);
+//                            Toast.makeText(MainActivity.this, "회원가입이 필요한 서비스입니다.", Toast.LENGTH_SHORT).show();
                         } else {
                             Intent intent = new Intent(MainActivity.this, Login_Joy.class);
                             startActivity(intent);
@@ -203,13 +207,12 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+
     } //oncreate 끝
 
     @Override
     protected void onResume() {
         super.onResume();
-        Button log=findViewById(R.id.logoutbtn);
-        Button out=findViewById(R.id.loginbtn);
         View headerView = navigationView.getHeaderView(0);
         CircleImageView userprofile = headerView.findViewById(R.id.drawer_profile);
         TextView usernickname = headerView.findViewById(R.id.drawer_nickname);
@@ -224,6 +227,7 @@ public class MainActivity extends AppCompatActivity {
 //            log.setVisibility(View.VISIBLE);
         }
 
+
     }
 
 
@@ -234,20 +238,19 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void clickLoginBtn(View view) {
-            Intent intent = new Intent(this, Login_Joy.class);
-            startActivity(intent);
+        Intent intent = new Intent(this, Login_Joy.class);
+        startActivity(intent);
+
     }
 //    }
 
     public void clicknickname(View view) {
-
         Intent intent = new Intent(this, Login_Joy.class);
         startActivity(intent);
     }
 
-    public void clickmypage(View view) {
-        Intent intent = new Intent(this, Login_Joy.class);
-        startActivity(intent);
-    }
+
+
+
 }
 
