@@ -14,6 +14,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
@@ -49,8 +50,10 @@ public class Home_Picture extends Fragment {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if (G.nickname!=null){
                 Intent intent = new Intent(getActivity(), Pic_Add.class);
                 startActivity(intent);
+                }else Toast.makeText(getContext(), "로그인이 필요한 서비스 입니다.", Toast.LENGTH_SHORT).show();
             }
         });
         return view;

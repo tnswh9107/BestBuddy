@@ -8,12 +8,14 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import android.Manifest;
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
@@ -48,12 +50,15 @@ public class Home_Play extends Fragment {
 
         button = view.findViewById(R.id.addplay);
 
+
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), Play_Add.class);
-                startActivity(intent);
 
+                if (G.nickname != null) {
+                    Intent intent = new Intent(getActivity(), Play_Add.class);
+                    startActivity(intent);
+                }else Toast.makeText(getContext(), "로그인이 필요한 서비스 입니다.", Toast.LENGTH_SHORT).show();
 
             }
         });

@@ -3,6 +3,7 @@ package com.hoyaok2.bestbuddy;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatButton;
 import androidx.appcompat.widget.Toolbar;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
@@ -17,10 +18,16 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
+import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
 import com.kakao.sdk.common.util.Utility;
+
+import de.hdodenhof.circleimageview.CircleImageView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -38,11 +45,13 @@ public class MainActivity extends AppCompatActivity {
     //로그인시 접속
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         int login = 0;
+
 
 
 //        //keyhash 키해쉬값 설정
@@ -163,11 +172,11 @@ public class MainActivity extends AppCompatActivity {
                             tran.add(R.id.container, fragments[4]);
                             tran.hide(fragments[4]);
                         }
-                        if (G.nickname!=null || G.userID!=null ){
+                        if (G.nickname != null || G.userID != null) {
                             tran.show(fragments[4]);
 
-                        }else{
-                            Intent intent = new Intent(MainActivity.this,Login_Joy.class);
+                        } else {
+                            Intent intent = new Intent(MainActivity.this, Login_Joy.class);
                             startActivity(intent);
                         }
 //                        tran.show(fragments[4]);
@@ -191,7 +200,31 @@ public class MainActivity extends AppCompatActivity {
             }
         }
 
+
+
+
     } //oncreate 끝
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Button log=findViewById(R.id.logoutbtn);
+        Button out=findViewById(R.id.loginbtn);
+        View headerView = navigationView.getHeaderView(0);
+        CircleImageView userprofile = headerView.findViewById(R.id.drawer_profile);
+        TextView usernickname = headerView.findViewById(R.id.drawer_nickname);
+
+        if (G.nickname != null) {
+            usernickname.setText(G.nickname + " 님 환영합니다");
+            Glide.with(this).load(G.profile).into(userprofile);
+
+//            Glide.with(this).load()
+//        }else{
+//            out.setVisibility(View.GONE);
+//            log.setVisibility(View.VISIBLE);
+        }
+
+    }
 
 
     public void clickSignupBtn(View view) {
@@ -199,10 +232,22 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+
     public void clickLoginBtn(View view) {
+            Intent intent = new Intent(this, Login_Joy.class);
+            startActivity(intent);
+    }
+//    }
+
+    public void clicknickname(View view) {
+
         Intent intent = new Intent(this, Login_Joy.class);
         startActivity(intent);
     }
 
-
+    public void clickmypage(View view) {
+        Intent intent = new Intent(this, Login_Joy.class);
+        startActivity(intent);
+    }
 }
+

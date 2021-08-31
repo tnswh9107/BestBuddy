@@ -68,17 +68,17 @@ public class Makemember extends AppCompatActivity {
                     Toast.makeText(Makemember.this, "모두 입력해주세요", Toast.LENGTH_SHORT).show();
                     return;
                 }
-                if (userID.length() <= 1) {
+                if (userID.length() <= 6) {
                     Toast.makeText(Makemember.this, "Id는 6글자 이상 가능합니다", Toast.LENGTH_SHORT).show();
                 }
-                if (userPassword.length() <= 1) {
+                if (userPassword.length() <= 8) {
                     Toast.makeText(Makemember.this, "비밀번호는 8글자 가능합니다", Toast.LENGTH_SHORT).show();
                 }
 //                if (userpw!=userpwc)
 //                {
 //                    Toast.makeText(Makemember.this, "비밀번호가 일치 하지 않습니다 다시확인해주세요", Toast.LENGTH_SHORT).show();
 //                }
-                if (userName.length() <= 1) {
+                if (userName.length() <= 2) {
                     Toast.makeText(Makemember.this, "닉네임은 2글자 이상 가능합니다.", Toast.LENGTH_SHORT).show();
                 }
 

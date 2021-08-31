@@ -26,7 +26,7 @@ public class Chatting_List extends AppCompatActivity {
         setContentView(R.layout.activity_chatting__list);
 
         recyclerView = findViewById(R.id.chattinglistview);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
+        recyclerView.setLayoutManager(new LinearLayoutManagerWrapper(this,LinearLayoutManager.VERTICAL,false));
         items = new ArrayList<>();
         serverNum = new ArrayList<>();
         adapter = new Chatting_RecycleAdapter(this,items,serverNum);

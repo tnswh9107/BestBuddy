@@ -79,6 +79,10 @@ public class Play_Show extends AppCompatActivity {
         shownickname.setText(usernickname);
         Glide.with(this).load(userprofile).into(showprofile);
 
+        G.othernickname=usernickname;
+        G.otherprofile=userprofile;
+         Log.d("hihi",""+G.othernickname);
+
         if (Build.VERSION.SDK_INT > Build.VERSION_CODES.LOLLIPOP) {
             showiv.setTransitionName("PlayShow");
         }
