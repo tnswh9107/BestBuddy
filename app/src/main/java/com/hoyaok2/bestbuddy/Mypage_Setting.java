@@ -14,6 +14,8 @@ import com.google.android.gms.tasks.Task;
 
 public class Mypage_Setting extends AppCompatActivity {
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

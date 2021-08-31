@@ -14,19 +14,22 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
+import com.kakao.sdk.user.UserApiClient;
 
 import de.hdodenhof.circleimageview.CircleImageView;
+import kotlin.Unit;
+import kotlin.jvm.functions.Function1;
 
 public class Home_Mypage extends Fragment {
 
     RecyclerView recyclerView;
     CircleImageView profile;
-    Button favorlist,setting,call,made;
-    TextView nickname,logout;
+    Button favorlist, setting, call, made;
+    TextView nickname, logout;
     int mypage = 0;
-
 
 
     @Override
@@ -37,14 +40,13 @@ public class Home_Mypage extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view =  inflater.inflate(R.layout.activity_home__mypage, container, false);
+        View view = inflater.inflate(R.layout.activity_home__mypage, container, false);
 
         favorlist = view.findViewById(R.id.mypage_favorlist);
         setting = view.findViewById(R.id.mypage_setting);
         call = view.findViewById(R.id.mypage_call);
         made = view.findViewById(R.id.mypage_madeid);
-
-
+        logout = view.findViewById(R.id.mypage_logout);
 
 
         //클릭시 만들어지는 4개의 함수 찜한 목록, 환경설정 고객센터 계정관리 시작
@@ -52,17 +54,16 @@ public class Home_Mypage extends Fragment {
         favorlist.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(),Mypage_favor.class);
+                Intent intent = new Intent(getActivity(), Mypage_favor.class);
                 startActivity(intent);
             }
         });//찜한목록 끝
 
 
-
         setting.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(),Mypage_Setting.class);
+                Intent intent = new Intent(getActivity(), Mypage_Setting.class);
                 startActivity(intent);
             }
         });
@@ -70,7 +71,7 @@ public class Home_Mypage extends Fragment {
         call.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(),Mypage_Setting.class);
+                Intent intent = new Intent(getActivity(), Mypage_Setting.class);
                 startActivity(intent);
             }
         });
@@ -78,11 +79,34 @@ public class Home_Mypage extends Fragment {
         made.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(),Mypage_Setting.class);
+                Intent intent = new Intent(getActivity(), Mypage_Setting.class);
                 startActivity(intent);
             }
         });
 
+        logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+//                Toast.makeText(getActivity(), "로그아웃클릭됨", Toast.LENGTH_SHORT).show();
+                UserApiClient.getInstance().logout(new Function1<Throwable, Unit>() {
+                    @Override
+                    public Unit invoke(Throwable throwable) {
+                        if(throwable !=null) {
+
+                        } else {
+                            Toast.makeText(getActivity(), "로그아웃", Toast.LENGTH_SHORT).show();
+
+                            //로그인 회원정보 화면들 모두 초기화
+                            nickname.setText(" ");
+                            Glide.with(getActivity()).load(R.drawable.profilenull).into(profile);
+                            startActivity(new Intent(getActivity(),Login_Joy.class));
+                        }
+                        return null;
+                    }
+                });
+
+            }
+        });
 
 
         return view;
@@ -93,11 +117,11 @@ public class Home_Mypage extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         nickname = getActivity().findViewById(R.id.mypage_nickname);
         profile = getActivity().findViewById(R.id.mypage_profile);
-        if(G.nickname!= null)
-        {
-            nickname.setText(G.nickname);
-            Glide.with(this).load(G.profile).into(profile);
-        }
+        nickname.setText(G.nickname);
+        Glide.with(this).load(G.profile).into(profile);
     }
+
+
+
 
 }

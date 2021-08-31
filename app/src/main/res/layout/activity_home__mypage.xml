@@ -38,7 +38,8 @@
            android:layout_alignParentBottom="true"
            android:layout_marginRight="50dp"
            android:layout_below="@id/mypage_nickname"
-           android:textSize="20dp" />
+           android:textSize="20dp"
+           android:onClick="mypage_logout"/>
 
    </RelativeLayout>
     <Button
@@ -50,7 +51,8 @@
         android:backgroundTint="#D3D3D3"
         android:padding="8dp"
         android:textSize="18sp"
-        android:textColor="#323131"/>
+        android:textColor="#323131"
+        />
 
     <Button
         android:id="@+id/mypage_setting"

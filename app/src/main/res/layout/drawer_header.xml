@@ -106,7 +106,7 @@
         android:layout_marginTop="6dp"
         android:layout_toRightOf="@+id/signup"
         android:background="@drawable/mypageicon"
-        android:onClick="clickmypage" />
+        android:onClick="clickmypage"/>
 
     <TextView
         android:layout_width="wrap_content"

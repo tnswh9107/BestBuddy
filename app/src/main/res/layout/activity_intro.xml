@@ -27,9 +27,11 @@
             android:text="Our Stroy"
             android:textSize="20dp" />
         <ImageView
+            android:paddingTop="10dp"
             android:layout_width="300dp"
             android:layout_height="300dp"
-            android:layout_gravity="center"/>
+            android:layout_gravity="center"
+            android:src="@drawable/introicon"/>
         <TextView
             android:paddingTop="60dp"
             android:layout_width="match_parent"

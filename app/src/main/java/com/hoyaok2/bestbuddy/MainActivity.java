@@ -26,8 +26,11 @@ import com.bumptech.glide.Glide;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
 import com.kakao.sdk.common.util.Utility;
+import com.kakao.sdk.user.UserApiClient;
 
 import de.hdodenhof.circleimageview.CircleImageView;
+import kotlin.Unit;
+import kotlin.jvm.functions.Function1;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -49,7 +52,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        int login = 0;
 
 
 //        //keyhash 키해쉬값 설정
@@ -58,6 +60,8 @@ public class MainActivity extends AppCompatActivity {
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+
 
 
 //        네이게이션 보여주기
@@ -113,6 +117,50 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             }
         });
+
+        //로그인, 로그아웃 이미지 변경및 로그아웃
+        View headerView= navigationView.getHeaderView(0);
+        CircleImageView userprofile=headerView.findViewById(R.id.drawer_profile);
+        TextView usernickname=headerView.findViewById(R.id.drawer_nickname);
+        Button logoutbtn=headerView.findViewById(R.id.logoutbtn);
+        Button loginbtn=headerView.findViewById(R.id.loginbtn);
+        TextView drawer_login=headerView.findViewById(R.id.drawer_login);
+        TextView drawer_logout=headerView.findViewById(R.id.drawer_logout);
+
+
+        if (G.nickname !=null){
+            drawer_login.setVisibility(View.GONE);
+            drawer_logout.setVisibility(View.VISIBLE);
+            logoutbtn.setVisibility(View.VISIBLE);
+            loginbtn.setVisibility(View.GONE);
+
+            logoutbtn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                    UserApiClient.getInstance().logout(new Function1<Throwable, Unit>() {
+                        @Override
+                        public Unit invoke(Throwable throwable) {
+                            if(throwable !=null) {
+//                            logoutbtn.setEnabled(false);
+                            } else {
+                                Toast.makeText(MainActivity.this, "로그아웃", Toast.LENGTH_SHORT).show();
+
+                                //로그인 회원정보 화면들 모두 초기화
+                                usernickname.setText(" ");
+                                Glide.with(headerView).load(G.profile).into(userprofile);
+
+                                drawer_login.setVisibility(View.VISIBLE);
+                                drawer_logout.setVisibility(View.GONE);
+                                logoutbtn.setVisibility(View.GONE);
+                                loginbtn.setVisibility(View.VISIBLE);
+                            }
+                            return null;
+                        }
+                    });
+                }
+            });
+        }
 
 
         fragmentManager = getSupportFragmentManager();
@@ -220,7 +268,6 @@ public class MainActivity extends AppCompatActivity {
         if (G.nickname != null) {
             usernickname.setText(G.nickname + " 님 환영합니다");
             Glide.with(this).load(G.profile).into(userprofile);
-
 //            Glide.with(this).load()
 //        }else{
 //            out.setVisibility(View.GONE);
@@ -244,13 +291,10 @@ public class MainActivity extends AppCompatActivity {
     }
 //    }
 
-    public void clicknickname(View view) {
-        Intent intent = new Intent(this, Login_Joy.class);
-        startActivity(intent);
+    public void clickmypage(View view) {
+        bnv.setSelectedItemId(R.id.mypage);
+        drawerLayout.closeDrawer(navigationView);
+
     }
-
-
-
-
 }
 
