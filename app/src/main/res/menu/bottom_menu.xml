@@ -11,7 +11,7 @@
         />
 <!--사진올리기-->
     <item android:id="@+id/picture"
-        android:title="사진올리기"
+        android:title="일상"
         android:icon="@drawable/nav_shopping"/>
 <!--리뷰-->
     <item android:id="@+id/play"

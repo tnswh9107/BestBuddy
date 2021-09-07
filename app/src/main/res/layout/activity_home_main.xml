@@ -14,7 +14,6 @@
         android:layout_height="match_parent">
 
 
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -52,9 +51,6 @@
             <!--   검색 레이아웃-->
 
 
-
-
-
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -68,8 +64,8 @@
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:layout_marginRight="30dp"
-                    android:text="숙소"
-                    android:background="@drawable/home_houseicon"/>
+                    android:background="@drawable/home_seaicon"
+                    android:text="해수욕장" />
 
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/sea"
@@ -77,16 +73,17 @@
                     android:layout_height="80dp"
                     android:layout_marginRight="30dp"
                     android:layout_toRightOf="@id/rest"
-                    android:text="바다"
-                    android:background="@drawable/home_seaicon"/>
+                    android:background="@drawable/home_houseicon"
+                    android:text="숙소" />
+
 
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/mountain"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:layout_toRightOf="@id/sea"
-                    android:text="산"
-                    android:background="@drawable/home_mountainicon"/>
+                    android:background="@drawable/home_mountainicon"
+                    android:text="산" />
             </RelativeLayout>
             <!--            숙소 바다 산 레이아웃-->
 
@@ -102,8 +99,8 @@
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:layout_marginRight="30dp"
-                    android:text="야영장"
-                    android:background="@drawable/home_campingicon"/>
+                    android:background="@drawable/home_campingicon"
+                    android:text="야영장" />
 
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/local"
@@ -111,7 +108,8 @@
                     android:layout_height="80dp"
                     android:layout_marginRight="30dp"
                     android:layout_toRightOf="@id/play"
-                    android:text="바다" />
+                    android:background="@drawable/see"
+                    android:text="강" />
 
             </RelativeLayout>
             <!--        숙소 바다 레이아웃-->
@@ -151,10 +149,9 @@
                     android:id="@+id/recycler"
                     android:layout_width="match_parent"
                     android:layout_height="270dp"
+                    android:orientation="horizontal"
                     android:padding="8dp"
-                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                    android:orientation="horizontal">
-                </androidx.recyclerview.widget.RecyclerView>
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"></androidx.recyclerview.widget.RecyclerView>
 
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -180,18 +177,18 @@
                         android:textSize="16sp"
                         android:textStyle="bold" />
                 </RelativeLayout>
+
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/recycler2"
                     android:layout_width="match_parent"
                     android:layout_height="270dp"
+                    android:orientation="horizontal"
                     android:padding="8dp"
-                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                    android:orientation="horizontal">
-                </androidx.recyclerview.widget.RecyclerView>
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"></androidx.recyclerview.widget.RecyclerView>
 
 
             </LinearLayout>
-<!--            Text리네어 인기많은글 더보기 끝-->
+            <!--            Text리네어 인기많은글 더보기 끝-->
 
         </LinearLayout>
         <!--        전체레이아웃-->
